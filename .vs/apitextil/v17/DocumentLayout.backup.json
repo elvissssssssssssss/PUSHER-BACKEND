@@ -1,0 +1,1010 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\USER\\source\\repos\\apitextil\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{C68D0803-E339-4F2C-BAD4-46369BEAA511}|apitextil\\apitextil.csproj|c:\\users\\user\\source\\repos\\apitextil\\apitextil\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C68D0803-E339-4F2C-BAD4-46369BEAA511}|apitextil\\apitextil.csproj|solutionrelative:apitextil\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C68D0803-E339-4F2C-BAD4-46369BEAA511}|apitextil\\apitextil.csproj|c:\\users\\user\\source\\repos\\apitextil\\apitextil\\controllers\\chatcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C68D0803-E339-4F2C-BAD4-46369BEAA511}|apitextil\\apitextil.csproj|solutionrelative:apitextil\\controllers\\chatcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C68D0803-E339-4F2C-BAD4-46369BEAA511}|apitextil\\apitextil.csproj|c:\\users\\user\\source\\repos\\apitextil\\apitextil\\controllers\\cartcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C68D0803-E339-4F2C-BAD4-46369BEAA511}|apitextil\\apitextil.csproj|solutionrelative:apitextil\\controllers\\cartcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C68D0803-E339-4F2C-BAD4-46369BEAA511}|apitextil\\apitextil.csproj|c:\\users\\user\\source\\repos\\apitextil\\apitextil\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{C68D0803-E339-4F2C-BAD4-46369BEAA511}|apitextil\\apitextil.csproj|solutionrelative:apitextil\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C68D0803-E339-4F2C-BAD4-46369BEAA511}|apitextil\\apitextil.csproj|c:\\users\\user\\source\\repos\\apitextil\\apitextil\\controllers\\comprobantescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C68D0803-E339-4F2C-BAD4-46369BEAA511}|apitextil\\apitextil.csproj|solutionrelative:apitextil\\controllers\\comprobantescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C68D0803-E339-4F2C-BAD4-46369BEAA511}|apitextil\\apitextil.csproj|c:\\users\\user\\source\\repos\\apitextil\\apitextil\\dtos\\chatmessagedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C68D0803-E339-4F2C-BAD4-46369BEAA511}|apitextil\\apitextil.csproj|solutionrelative:apitextil\\dtos\\chatmessagedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C68D0803-E339-4F2C-BAD4-46369BEAA511}|apitextil\\apitextil.csproj|c:\\users\\user\\source\\repos\\apitextil\\apitextil\\controllers\\authcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C68D0803-E339-4F2C-BAD4-46369BEAA511}|apitextil\\apitextil.csproj|solutionrelative:apitextil\\controllers\\authcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C68D0803-E339-4F2C-BAD4-46369BEAA511}|apitextil\\apitextil.csproj|c:\\users\\user\\source\\repos\\apitextil\\apitextil\\controllers\\ventascontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C68D0803-E339-4F2C-BAD4-46369BEAA511}|apitextil\\apitextil.csproj|solutionrelative:apitextil\\controllers\\ventascontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C68D0803-E339-4F2C-BAD4-46369BEAA511}|apitextil\\apitextil.csproj|c:\\users\\user\\source\\repos\\apitextil\\apitextil\\controllers\\weatherforecastcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C68D0803-E339-4F2C-BAD4-46369BEAA511}|apitextil\\apitextil.csproj|solutionrelative:apitextil\\controllers\\weatherforecastcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C68D0803-E339-4F2C-BAD4-46369BEAA511}|apitextil\\apitextil.csproj|c:\\users\\user\\source\\repos\\apitextil\\apitextil\\apitextil.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
+      "RelativeMoniker": "D:0:0:{C68D0803-E339-4F2C-BAD4-46369BEAA511}|apitextil\\apitextil.csproj|solutionrelative:apitextil\\apitextil.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C68D0803-E339-4F2C-BAD4-46369BEAA511}|apitextil\\apitextil.csproj|c:\\users\\user\\source\\repos\\apitextil\\apitextil\\controllers\\envioscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C68D0803-E339-4F2C-BAD4-46369BEAA511}|apitextil\\apitextil.csproj|solutionrelative:apitextil\\controllers\\envioscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C68D0803-E339-4F2C-BAD4-46369BEAA511}|apitextil\\apitextil.csproj|c:\\users\\user\\source\\repos\\apitextil\\apitextil\\models\\seguimientoenvio.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C68D0803-E339-4F2C-BAD4-46369BEAA511}|apitextil\\apitextil.csproj|solutionrelative:apitextil\\models\\seguimientoenvio.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C68D0803-E339-4F2C-BAD4-46369BEAA511}|apitextil\\apitextil.csproj|c:\\users\\user\\source\\repos\\apitextil\\apitextil\\apitextil.http||{5703B403-55E7-4C63-8C88-A8F52C7A45C5}",
+      "RelativeMoniker": "D:0:0:{C68D0803-E339-4F2C-BAD4-46369BEAA511}|apitextil\\apitextil.csproj|solutionrelative:apitextil\\apitextil.http||{5703B403-55E7-4C63-8C88-A8F52C7A45C5}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C68D0803-E339-4F2C-BAD4-46369BEAA511}|apitextil\\apitextil.csproj|c:\\users\\user\\source\\repos\\apitextil\\apitextil\\services\\ventaservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C68D0803-E339-4F2C-BAD4-46369BEAA511}|apitextil\\apitextil.csproj|solutionrelative:apitextil\\services\\ventaservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C68D0803-E339-4F2C-BAD4-46369BEAA511}|apitextil\\apitextil.csproj|c:\\users\\user\\source\\repos\\apitextil\\apitextil\\services\\iventaservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C68D0803-E339-4F2C-BAD4-46369BEAA511}|apitextil\\apitextil.csproj|solutionrelative:apitextil\\services\\iventaservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C68D0803-E339-4F2C-BAD4-46369BEAA511}|apitextil\\apitextil.csproj|c:\\users\\user\\source\\repos\\apitextil\\apitextil\\dtos\\emitircomprobantedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C68D0803-E339-4F2C-BAD4-46369BEAA511}|apitextil\\apitextil.csproj|solutionrelative:apitextil\\dtos\\emitircomprobantedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C68D0803-E339-4F2C-BAD4-46369BEAA511}|apitextil\\apitextil.csproj|c:\\users\\user\\source\\repos\\apitextil\\apitextil\\services\\envioservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C68D0803-E339-4F2C-BAD4-46369BEAA511}|apitextil\\apitextil.csproj|solutionrelative:apitextil\\services\\envioservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C68D0803-E339-4F2C-BAD4-46369BEAA511}|apitextil\\apitextil.csproj|c:\\users\\user\\source\\repos\\apitextil\\apitextil\\services\\ienvioservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C68D0803-E339-4F2C-BAD4-46369BEAA511}|apitextil\\apitextil.csproj|solutionrelative:apitextil\\services\\ienvioservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C68D0803-E339-4F2C-BAD4-46369BEAA511}|apitextil\\apitextil.csproj|c:\\users\\user\\source\\repos\\apitextil\\apitextil\\services\\niubizservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C68D0803-E339-4F2C-BAD4-46369BEAA511}|apitextil\\apitextil.csproj|solutionrelative:apitextil\\services\\niubizservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C68D0803-E339-4F2C-BAD4-46369BEAA511}|apitextil\\apitextil.csproj|c:\\users\\user\\source\\repos\\apitextil\\apitextil\\services\\iproductoservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C68D0803-E339-4F2C-BAD4-46369BEAA511}|apitextil\\apitextil.csproj|solutionrelative:apitextil\\services\\iproductoservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C68D0803-E339-4F2C-BAD4-46369BEAA511}|apitextil\\apitextil.csproj|c:\\users\\user\\source\\repos\\apitextil\\apitextil\\services\\icartservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C68D0803-E339-4F2C-BAD4-46369BEAA511}|apitextil\\apitextil.csproj|solutionrelative:apitextil\\services\\icartservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C68D0803-E339-4F2C-BAD4-46369BEAA511}|apitextil\\apitextil.csproj|c:\\users\\user\\source\\repos\\apitextil\\apitextil\\services\\iauthservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C68D0803-E339-4F2C-BAD4-46369BEAA511}|apitextil\\apitextil.csproj|solutionrelative:apitextil\\services\\iauthservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C68D0803-E339-4F2C-BAD4-46369BEAA511}|apitextil\\apitextil.csproj|c:\\users\\user\\source\\repos\\apitextil\\apitextil\\controllers\\tblenvioscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C68D0803-E339-4F2C-BAD4-46369BEAA511}|apitextil\\apitextil.csproj|solutionrelative:apitextil\\controllers\\tblenvioscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C68D0803-E339-4F2C-BAD4-46369BEAA511}|apitextil\\apitextil.csproj|c:\\users\\user\\source\\repos\\apitextil\\apitextil\\controllers\\productoscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C68D0803-E339-4F2C-BAD4-46369BEAA511}|apitextil\\apitextil.csproj|solutionrelative:apitextil\\controllers\\productoscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C68D0803-E339-4F2C-BAD4-46369BEAA511}|apitextil\\apitextil.csproj|c:\\users\\user\\source\\repos\\apitextil\\apitextil\\controllers\\niubizcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C68D0803-E339-4F2C-BAD4-46369BEAA511}|apitextil\\apitextil.csproj|solutionrelative:apitextil\\controllers\\niubizcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C68D0803-E339-4F2C-BAD4-46369BEAA511}|apitextil\\apitextil.csproj|c:\\users\\user\\source\\repos\\apitextil\\apitextil\\dtos\\documentoenviodto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C68D0803-E339-4F2C-BAD4-46369BEAA511}|apitextil\\apitextil.csproj|solutionrelative:apitextil\\dtos\\documentoenviodto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C68D0803-E339-4F2C-BAD4-46369BEAA511}|apitextil\\apitextil.csproj|c:\\users\\user\\source\\repos\\apitextil\\apitextil\\services\\authservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C68D0803-E339-4F2C-BAD4-46369BEAA511}|apitextil\\apitextil.csproj|solutionrelative:apitextil\\services\\authservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C68D0803-E339-4F2C-BAD4-46369BEAA511}|apitextil\\apitextil.csproj|c:\\users\\user\\source\\repos\\apitextil\\apitextil\\models\\metodopago.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C68D0803-E339-4F2C-BAD4-46369BEAA511}|apitextil\\apitextil.csproj|solutionrelative:apitextil\\models\\metodopago.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C68D0803-E339-4F2C-BAD4-46369BEAA511}|apitextil\\apitextil.csproj|c:\\users\\user\\source\\repos\\apitextil\\apitextil\\models\\productos.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C68D0803-E339-4F2C-BAD4-46369BEAA511}|apitextil\\apitextil.csproj|solutionrelative:apitextil\\models\\productos.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C68D0803-E339-4F2C-BAD4-46369BEAA511}|apitextil\\apitextil.csproj|c:\\users\\user\\source\\repos\\apitextil\\apitextil\\models\\estadoenvio.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C68D0803-E339-4F2C-BAD4-46369BEAA511}|apitextil\\apitextil.csproj|solutionrelative:apitextil\\models\\estadoenvio.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C68D0803-E339-4F2C-BAD4-46369BEAA511}|apitextil\\apitextil.csproj|c:\\users\\user\\source\\repos\\apitextil\\apitextil\\models\\documentoenvio.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C68D0803-E339-4F2C-BAD4-46369BEAA511}|apitextil\\apitextil.csproj|solutionrelative:apitextil\\models\\documentoenvio.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C68D0803-E339-4F2C-BAD4-46369BEAA511}|apitextil\\apitextil.csproj|c:\\users\\user\\source\\repos\\apitextil\\apitextil\\models\\detalleventa.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C68D0803-E339-4F2C-BAD4-46369BEAA511}|apitextil\\apitextil.csproj|solutionrelative:apitextil\\models\\detalleventa.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C68D0803-E339-4F2C-BAD4-46369BEAA511}|apitextil\\apitextil.csproj|c:\\users\\user\\source\\repos\\apitextil\\apitextil\\models\\comprobanteventa.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C68D0803-E339-4F2C-BAD4-46369BEAA511}|apitextil\\apitextil.csproj|solutionrelative:apitextil\\models\\comprobanteventa.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C68D0803-E339-4F2C-BAD4-46369BEAA511}|apitextil\\apitextil.csproj|c:\\users\\user\\source\\repos\\apitextil\\apitextil\\models\\tblenvios.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C68D0803-E339-4F2C-BAD4-46369BEAA511}|apitextil\\apitextil.csproj|solutionrelative:apitextil\\models\\tblenvios.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C68D0803-E339-4F2C-BAD4-46369BEAA511}|apitextil\\apitextil.csproj|c:\\users\\user\\source\\repos\\apitextil\\apitextil\\dtos\\tblenviosdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C68D0803-E339-4F2C-BAD4-46369BEAA511}|apitextil\\apitextil.csproj|solutionrelative:apitextil\\dtos\\tblenviosdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C68D0803-E339-4F2C-BAD4-46369BEAA511}|apitextil\\apitextil.csproj|c:\\users\\user\\source\\repos\\apitextil\\apitextil\\dtos\\orders\\ventadto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C68D0803-E339-4F2C-BAD4-46369BEAA511}|apitextil\\apitextil.csproj|solutionrelative:apitextil\\dtos\\orders\\ventadto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C68D0803-E339-4F2C-BAD4-46369BEAA511}|apitextil\\apitextil.csproj|c:\\users\\user\\source\\repos\\apitextil\\apitextil\\models\\tblusuario.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C68D0803-E339-4F2C-BAD4-46369BEAA511}|apitextil\\apitextil.csproj|solutionrelative:apitextil\\models\\tblusuario.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C68D0803-E339-4F2C-BAD4-46369BEAA511}|apitextil\\apitextil.csproj|c:\\users\\user\\source\\repos\\apitextil\\apitextil\\models\\venta.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C68D0803-E339-4F2C-BAD4-46369BEAA511}|apitextil\\apitextil.csproj|solutionrelative:apitextil\\models\\venta.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C68D0803-E339-4F2C-BAD4-46369BEAA511}|apitextil\\apitextil.csproj|c:\\users\\user\\source\\repos\\apitextil\\apitextil\\models\\cartitem.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C68D0803-E339-4F2C-BAD4-46369BEAA511}|apitextil\\apitextil.csproj|solutionrelative:apitextil\\models\\cartitem.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C68D0803-E339-4F2C-BAD4-46369BEAA511}|apitextil\\apitextil.csproj|c:\\users\\user\\source\\repos\\apitextil\\apitextil\\services\\cartservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C68D0803-E339-4F2C-BAD4-46369BEAA511}|apitextil\\apitextil.csproj|solutionrelative:apitextil\\services\\cartservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C68D0803-E339-4F2C-BAD4-46369BEAA511}|apitextil\\apitextil.csproj|c:\\users\\user\\source\\repos\\apitextil\\apitextil\\dtos\\orders\\createventacondetallesdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C68D0803-E339-4F2C-BAD4-46369BEAA511}|apitextil\\apitextil.csproj|solutionrelative:apitextil\\dtos\\orders\\createventacondetallesdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C68D0803-E339-4F2C-BAD4-46369BEAA511}|apitextil\\apitextil.csproj|c:\\users\\user\\source\\repos\\apitextil\\apitextil\\dtos\\orders\\createpreferencerequestdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C68D0803-E339-4F2C-BAD4-46369BEAA511}|apitextil\\apitextil.csproj|solutionrelative:apitextil\\dtos\\orders\\createpreferencerequestdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C68D0803-E339-4F2C-BAD4-46369BEAA511}|apitextil\\apitextil.csproj|c:\\users\\user\\source\\repos\\apitextil\\apitextil\\dtos\\orders\\createdetalleventadto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C68D0803-E339-4F2C-BAD4-46369BEAA511}|apitextil\\apitextil.csproj|solutionrelative:apitextil\\dtos\\orders\\createdetalleventadto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C68D0803-E339-4F2C-BAD4-46369BEAA511}|apitextil\\apitextil.csproj|c:\\users\\user\\source\\repos\\apitextil\\apitextil\\dtos\\authdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C68D0803-E339-4F2C-BAD4-46369BEAA511}|apitextil\\apitextil.csproj|solutionrelative:apitextil\\dtos\\authdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C68D0803-E339-4F2C-BAD4-46369BEAA511}|apitextil\\apitextil.csproj|c:\\users\\user\\source\\repos\\apitextil\\apitextil\\data\\ecommercecontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C68D0803-E339-4F2C-BAD4-46369BEAA511}|apitextil\\apitextil.csproj|solutionrelative:apitextil\\data\\ecommercecontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C68D0803-E339-4F2C-BAD4-46369BEAA511}|apitextil\\apitextil.csproj|c:\\users\\user\\source\\repos\\apitextil\\apitextil\\services\\itblenviosservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C68D0803-E339-4F2C-BAD4-46369BEAA511}|apitextil\\apitextil.csproj|solutionrelative:apitextil\\services\\itblenviosservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C68D0803-E339-4F2C-BAD4-46369BEAA511}|apitextil\\apitextil.csproj|c:\\users\\user\\source\\repos\\apitextil\\apitextil\\services\\tblenviosservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C68D0803-E339-4F2C-BAD4-46369BEAA511}|apitextil\\apitextil.csproj|solutionrelative:apitextil\\services\\tblenviosservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C68D0803-E339-4F2C-BAD4-46369BEAA511}|apitextil\\apitextil.csproj|c:\\users\\user\\source\\repos\\apitextil\\apitextil\\dtos\\seguimientoenviodto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C68D0803-E339-4F2C-BAD4-46369BEAA511}|apitextil\\apitextil.csproj|solutionrelative:apitextil\\dtos\\seguimientoenviodto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C68D0803-E339-4F2C-BAD4-46369BEAA511}|apitextil\\apitextil.csproj|c:\\users\\user\\source\\repos\\apitextil\\apitextil\\dtos\\productosdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C68D0803-E339-4F2C-BAD4-46369BEAA511}|apitextil\\apitextil.csproj|solutionrelative:apitextil\\dtos\\productosdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C68D0803-E339-4F2C-BAD4-46369BEAA511}|apitextil\\apitextil.csproj|c:\\users\\user\\source\\repos\\apitextil\\apitextil\\apitextil.csproj||{04B8AB82-A572-4FEF-95CE-5222444B6B64}|",
+      "RelativeMoniker": "D:0:0:{C68D0803-E339-4F2C-BAD4-46369BEAA511}|apitextil\\apitextil.csproj|solutionrelative:apitextil\\apitextil.csproj||{04B8AB82-A572-4FEF-95CE-5222444B6B64}|"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C68D0803-E339-4F2C-BAD4-46369BEAA511}|apitextil\\apitextil.csproj|c:\\users\\user\\source\\repos\\apitextil\\apitextil\\dtos\\orders\\createventadto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C68D0803-E339-4F2C-BAD4-46369BEAA511}|apitextil\\apitextil.csproj|solutionrelative:apitextil\\dtos\\orders\\createventadto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C68D0803-E339-4F2C-BAD4-46369BEAA511}|apitextil\\apitextil.csproj|c:\\users\\user\\source\\repos\\apitextil\\apitextil\\dtos\\itemcomprobantedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C68D0803-E339-4F2C-BAD4-46369BEAA511}|apitextil\\apitextil.csproj|solutionrelative:apitextil\\dtos\\itemcomprobantedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C68D0803-E339-4F2C-BAD4-46369BEAA511}|apitextil\\apitextil.csproj|c:\\users\\user\\source\\repos\\apitextil\\apitextil\\services\\applicationdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C68D0803-E339-4F2C-BAD4-46369BEAA511}|apitextil\\apitextil.csproj|solutionrelative:apitextil\\services\\applicationdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C68D0803-E339-4F2C-BAD4-46369BEAA511}|apitextil\\apitextil.csproj|c:\\users\\user\\source\\repos\\apitextil\\apitextil\\databaseconnectiontester.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C68D0803-E339-4F2C-BAD4-46369BEAA511}|apitextil\\apitextil.csproj|solutionrelative:apitextil\\databaseconnectiontester.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C68D0803-E339-4F2C-BAD4-46369BEAA511}|apitextil\\apitextil.csproj|c:\\users\\user\\source\\repos\\apitextil\\apitextil\\cartcleanupservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C68D0803-E339-4F2C-BAD4-46369BEAA511}|apitextil\\apitextil.csproj|solutionrelative:apitextil\\cartcleanupservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C68D0803-E339-4F2C-BAD4-46369BEAA511}|apitextil\\apitextil.csproj|c:\\users\\user\\source\\repos\\apitextil\\apitextil\\weatherforecast.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C68D0803-E339-4F2C-BAD4-46369BEAA511}|apitextil\\apitextil.csproj|solutionrelative:apitextil\\weatherforecast.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C68D0803-E339-4F2C-BAD4-46369BEAA511}|apitextil\\apitextil.csproj|c:\\users\\user\\source\\repos\\apitextil\\apitextil\\services\\productoservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C68D0803-E339-4F2C-BAD4-46369BEAA511}|apitextil\\apitextil.csproj|solutionrelative:apitextil\\services\\productoservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C68D0803-E339-4F2C-BAD4-46369BEAA511}|apitextil\\apitextil.csproj|c:\\users\\user\\source\\repos\\apitextil\\apitextil\\dtos\\cartitemdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C68D0803-E339-4F2C-BAD4-46369BEAA511}|apitextil\\apitextil.csproj|solutionrelative:apitextil\\dtos\\cartitemdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 28,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "apitextil.csproj",
+              "DocumentMoniker": "C:\\Users\\USER\\source\\repos\\apitextil\\apitextil\\apitextil.csproj",
+              "RelativeDocumentMoniker": "apitextil\\apitextil.csproj",
+              "ToolTip": "C:\\Users\\USER\\source\\repos\\apitextil\\apitextil\\apitextil.csproj",
+              "RelativeToolTip": "apitextil\\apitextil.csproj",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAiwBkAAAANAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
+              "WhenOpened": "2025-06-20T04:42:04.179Z",
+              "IsPinned": true,
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "ChatMessageDto.cs",
+              "DocumentMoniker": "C:\\Users\\USER\\source\\repos\\apitextil\\apitextil\\DTOs\\ChatMessageDto.cs",
+              "RelativeDocumentMoniker": "apitextil\\DTOs\\ChatMessageDto.cs",
+              "ToolTip": "C:\\Users\\USER\\source\\repos\\apitextil\\apitextil\\DTOs\\ChatMessageDto.cs",
+              "RelativeToolTip": "apitextil\\DTOs\\ChatMessageDto.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-12T00:35:56.017Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "ChatController.cs",
+              "DocumentMoniker": "C:\\Users\\USER\\source\\repos\\apitextil\\apitextil\\Controllers\\ChatController.cs",
+              "RelativeDocumentMoniker": "apitextil\\Controllers\\ChatController.cs",
+              "ToolTip": "C:\\Users\\USER\\source\\repos\\apitextil\\apitextil\\Controllers\\ChatController.cs",
+              "RelativeToolTip": "apitextil\\Controllers\\ChatController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-12T00:23:54.079Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "EnviosController.cs",
+              "DocumentMoniker": "C:\\Users\\USER\\source\\repos\\apitextil\\apitextil\\Controllers\\EnviosController.cs",
+              "RelativeDocumentMoniker": "apitextil\\Controllers\\EnviosController.cs",
+              "ToolTip": "C:\\Users\\USER\\source\\repos\\apitextil\\apitextil\\Controllers\\EnviosController.cs",
+              "RelativeToolTip": "apitextil\\Controllers\\EnviosController.cs",
+              "ViewState": "AgIAAIUAAAAAAAAAAAAIwIcAAAAxAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-26T05:02:01.023Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 16,
+              "Title": "EnvioService.cs",
+              "DocumentMoniker": "C:\\Users\\USER\\source\\repos\\apitextil\\apitextil\\Services\\EnvioService.cs",
+              "RelativeDocumentMoniker": "apitextil\\Services\\EnvioService.cs",
+              "ToolTip": "C:\\Users\\USER\\source\\repos\\apitextil\\apitextil\\Services\\EnvioService.cs",
+              "RelativeToolTip": "apitextil\\Services\\EnvioService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAEAAAAVAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-26T04:59:21.522Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 17,
+              "Title": "IEnvioService.cs",
+              "DocumentMoniker": "C:\\Users\\USER\\source\\repos\\apitextil\\apitextil\\Services\\IEnvioService.cs",
+              "RelativeDocumentMoniker": "apitextil\\Services\\IEnvioService.cs",
+              "ToolTip": "C:\\Users\\USER\\source\\repos\\apitextil\\apitextil\\Services\\IEnvioService.cs",
+              "RelativeToolTip": "apitextil\\Services\\IEnvioService.cs",
+              "ViewState": "AgIAAAIAAAAAAAAAAAAEwA4AAAA2AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-26T04:58:27.961Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 25,
+              "Title": "DocumentoEnvioDto.cs",
+              "DocumentMoniker": "C:\\Users\\USER\\source\\repos\\apitextil\\apitextil\\DTOs\\DocumentoEnvioDto.cs",
+              "RelativeDocumentMoniker": "apitextil\\DTOs\\DocumentoEnvioDto.cs",
+              "ToolTip": "C:\\Users\\USER\\source\\repos\\apitextil\\apitextil\\DTOs\\DocumentoEnvioDto.cs",
+              "RelativeToolTip": "apitextil\\DTOs\\DocumentoEnvioDto.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAyAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-26T04:57:24.549Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 47,
+              "Title": "SeguimientoEnvioDto.cs",
+              "DocumentMoniker": "C:\\Users\\USER\\source\\repos\\apitextil\\apitextil\\DTOs\\SeguimientoEnvioDto.cs",
+              "RelativeDocumentMoniker": "apitextil\\DTOs\\SeguimientoEnvioDto.cs",
+              "ToolTip": "C:\\Users\\USER\\source\\repos\\apitextil\\apitextil\\DTOs\\SeguimientoEnvioDto.cs",
+              "RelativeToolTip": "apitextil\\DTOs\\SeguimientoEnvioDto.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-26T04:55:39.743Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 30,
+              "Title": "DocumentoEnvio.cs",
+              "DocumentMoniker": "C:\\Users\\USER\\source\\repos\\apitextil\\apitextil\\Models\\DocumentoEnvio.cs",
+              "RelativeDocumentMoniker": "apitextil\\Models\\DocumentoEnvio.cs",
+              "ToolTip": "C:\\Users\\USER\\source\\repos\\apitextil\\apitextil\\Models\\DocumentoEnvio.cs",
+              "RelativeToolTip": "apitextil\\Models\\DocumentoEnvio.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAMAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-26T04:54:36.427Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "SeguimientoEnvio.cs",
+              "DocumentMoniker": "C:\\Users\\USER\\source\\repos\\apitextil\\apitextil\\Models\\SeguimientoEnvio.cs",
+              "RelativeDocumentMoniker": "apitextil\\Models\\SeguimientoEnvio.cs",
+              "ToolTip": "C:\\Users\\USER\\source\\repos\\apitextil\\apitextil\\Models\\SeguimientoEnvio.cs",
+              "RelativeToolTip": "apitextil\\Models\\SeguimientoEnvio.cs",
+              "ViewState": "AgIAAB0AAAAAAAAAAAAswAMAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-26T04:53:47.15Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 29,
+              "Title": "EstadoEnvio.cs",
+              "DocumentMoniker": "C:\\Users\\USER\\source\\repos\\apitextil\\apitextil\\Models\\EstadoEnvio.cs",
+              "RelativeDocumentMoniker": "apitextil\\Models\\EstadoEnvio.cs",
+              "ToolTip": "C:\\Users\\USER\\source\\repos\\apitextil\\apitextil\\Models\\EstadoEnvio.cs",
+              "RelativeToolTip": "apitextil\\Models\\EstadoEnvio.cs",
+              "ViewState": "AgIAAAMAAAAAAAAAAIBJwA8AAAAVAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-26T04:52:37.922Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 15,
+              "Title": "EmitirComprobanteDto.cs",
+              "DocumentMoniker": "C:\\Users\\USER\\source\\repos\\apitextil\\apitextil\\DTOs\\EmitirComprobanteDto.cs",
+              "RelativeDocumentMoniker": "apitextil\\DTOs\\EmitirComprobanteDto.cs",
+              "ToolTip": "C:\\Users\\USER\\source\\repos\\apitextil\\apitextil\\DTOs\\EmitirComprobanteDto.cs",
+              "RelativeToolTip": "apitextil\\DTOs\\EmitirComprobanteDto.cs",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAkwBUAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-19T19:27:03.201Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 51,
+              "Title": "ItemComprobanteDto.cs",
+              "DocumentMoniker": "C:\\Users\\USER\\source\\repos\\apitextil\\apitextil\\DTOs\\ItemComprobanteDto.cs",
+              "RelativeDocumentMoniker": "apitextil\\DTOs\\ItemComprobanteDto.cs",
+              "ToolTip": "C:\\Users\\USER\\source\\repos\\apitextil\\apitextil\\DTOs\\ItemComprobanteDto.cs",
+              "RelativeToolTip": "apitextil\\DTOs\\ItemComprobanteDto.cs",
+              "ViewState": "AgIAAAkAAAAAAAAAAAA7wAoAAAAsAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-19T15:59:53.095Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 32,
+              "Title": "ComprobanteVenta.cs",
+              "DocumentMoniker": "C:\\Users\\USER\\source\\repos\\apitextil\\apitextil\\Models\\ComprobanteVenta.cs",
+              "RelativeDocumentMoniker": "apitextil\\Models\\ComprobanteVenta.cs",
+              "ToolTip": "C:\\Users\\USER\\source\\repos\\apitextil\\apitextil\\Models\\ComprobanteVenta.cs",
+              "RelativeToolTip": "apitextil\\Models\\ComprobanteVenta.cs",
+              "ViewState": "AgIAAAwAAAAAAAAAAAAQwBYAAAATAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-19T15:40:48.76Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "ComprobantesController.cs",
+              "DocumentMoniker": "C:\\Users\\USER\\source\\repos\\apitextil\\apitextil\\Controllers\\ComprobantesController.cs",
+              "RelativeDocumentMoniker": "apitextil\\Controllers\\ComprobantesController.cs",
+              "ToolTip": "C:\\Users\\USER\\source\\repos\\apitextil\\apitextil\\Controllers\\ComprobantesController.cs",
+              "RelativeToolTip": "apitextil\\Controllers\\ComprobantesController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-19T15:30:53.796Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 40,
+              "Title": "CreateVentaConDetallesDto.cs",
+              "DocumentMoniker": "C:\\Users\\USER\\source\\repos\\apitextil\\apitextil\\DTOs\\Orders\\CreateVentaConDetallesDto.cs",
+              "RelativeDocumentMoniker": "apitextil\\DTOs\\Orders\\CreateVentaConDetallesDto.cs",
+              "ToolTip": "C:\\Users\\USER\\source\\repos\\apitextil\\apitextil\\DTOs\\Orders\\CreateVentaConDetallesDto.cs",
+              "RelativeToolTip": "apitextil\\DTOs\\Orders\\CreateVentaConDetallesDto.cs",
+              "ViewState": "AgIAAAIAAAAAAAAAAAAcwA0AAABCAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-11T05:56:44.908Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 50,
+              "Title": "CreateVentaDto.cs",
+              "DocumentMoniker": "C:\\Users\\USER\\source\\repos\\apitextil\\apitextil\\DTOs\\Orders\\CreateVentaDto.cs",
+              "RelativeDocumentMoniker": "apitextil\\DTOs\\Orders\\CreateVentaDto.cs",
+              "ToolTip": "C:\\Users\\USER\\source\\repos\\apitextil\\apitextil\\DTOs\\Orders\\CreateVentaDto.cs",
+              "RelativeToolTip": "apitextil\\DTOs\\Orders\\CreateVentaDto.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAmAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-11T05:17:08.985Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 35,
+              "Title": "VentaDto.cs",
+              "DocumentMoniker": "C:\\Users\\USER\\source\\repos\\apitextil\\apitextil\\DTOs\\Orders\\VentaDto.cs",
+              "RelativeDocumentMoniker": "apitextil\\DTOs\\Orders\\VentaDto.cs",
+              "ToolTip": "C:\\Users\\USER\\source\\repos\\apitextil\\apitextil\\DTOs\\Orders\\VentaDto.cs",
+              "RelativeToolTip": "apitextil\\DTOs\\Orders\\VentaDto.cs",
+              "ViewState": "AgIAABAAAAAAAAAAAAAwwBQAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-16T06:11:23.812Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "appsettings.json",
+              "DocumentMoniker": "C:\\Users\\USER\\source\\repos\\apitextil\\apitextil\\appsettings.json",
+              "RelativeDocumentMoniker": "apitextil\\appsettings.json",
+              "ToolTip": "C:\\Users\\USER\\source\\repos\\apitextil\\apitextil\\appsettings.json",
+              "RelativeToolTip": "apitextil\\appsettings.json",
+              "ViewState": "AgIAAA8AAAAAAAAAAAAuwB0AAAADAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2025-06-20T04:06:55.349Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "VentasController.cs",
+              "DocumentMoniker": "C:\\Users\\USER\\source\\repos\\apitextil\\apitextil\\Controllers\\VentasController.cs",
+              "RelativeDocumentMoniker": "apitextil\\Controllers\\VentasController.cs",
+              "ToolTip": "C:\\Users\\USER\\source\\repos\\apitextil\\apitextil\\Controllers\\VentasController.cs",
+              "RelativeToolTip": "apitextil\\Controllers\\VentasController.cs",
+              "ViewState": "AgIAAFEAAAAAAAAAAAAmwGAAAAANAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-11T05:20:35.881Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 43,
+              "Title": "AuthDto.cs",
+              "DocumentMoniker": "C:\\Users\\USER\\source\\repos\\apitextil\\apitextil\\DTOs\\AuthDto.cs",
+              "RelativeDocumentMoniker": "apitextil\\DTOs\\AuthDto.cs",
+              "ToolTip": "C:\\Users\\USER\\source\\repos\\apitextil\\apitextil\\DTOs\\AuthDto.cs",
+              "RelativeToolTip": "apitextil\\DTOs\\AuthDto.cs",
+              "ViewState": "AgIAADoAAAAAAAAAAAAkwFAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-21T00:18:58.615Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 42,
+              "Title": "CreateDetalleVentaDto.cs",
+              "DocumentMoniker": "C:\\Users\\USER\\source\\repos\\apitextil\\apitextil\\DTOs\\Orders\\CreateDetalleVentaDto.cs",
+              "RelativeDocumentMoniker": "apitextil\\DTOs\\Orders\\CreateDetalleVentaDto.cs",
+              "ToolTip": "C:\\Users\\USER\\source\\repos\\apitextil\\apitextil\\DTOs\\Orders\\CreateDetalleVentaDto.cs",
+              "RelativeToolTip": "apitextil\\DTOs\\Orders\\CreateDetalleVentaDto.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAApAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-11T05:55:24.78Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "VentaService.cs",
+              "DocumentMoniker": "C:\\Users\\USER\\source\\repos\\apitextil\\apitextil\\Services\\VentaService.cs",
+              "RelativeDocumentMoniker": "apitextil\\Services\\VentaService.cs",
+              "ToolTip": "C:\\Users\\USER\\source\\repos\\apitextil\\apitextil\\Services\\VentaService.cs",
+              "RelativeToolTip": "apitextil\\Services\\VentaService.cs",
+              "ViewState": "AgIAAKUAAAAAAAAAAAAmwL8AAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-11T05:19:52.099Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 46,
+              "Title": "TblEnviosService.cs",
+              "DocumentMoniker": "C:\\Users\\USER\\source\\repos\\apitextil\\apitextil\\Services\\TblEnviosService.cs",
+              "RelativeDocumentMoniker": "apitextil\\Services\\TblEnviosService.cs",
+              "ToolTip": "C:\\Users\\USER\\source\\repos\\apitextil\\apitextil\\Services\\TblEnviosService.cs",
+              "RelativeToolTip": "apitextil\\Services\\TblEnviosService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABcAAAAlAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-05T02:11:51.975Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 38,
+              "Title": "CartItem.cs",
+              "DocumentMoniker": "C:\\Users\\USER\\source\\repos\\apitextil\\apitextil\\Models\\CartItem.cs",
+              "RelativeDocumentMoniker": "apitextil\\Models\\CartItem.cs",
+              "ToolTip": "C:\\Users\\USER\\source\\repos\\apitextil\\apitextil\\Models\\CartItem.cs",
+              "RelativeToolTip": "apitextil\\Models\\CartItem.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAWAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-04T04:21:47.241Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "IVentaService.cs",
+              "DocumentMoniker": "C:\\Users\\USER\\source\\repos\\apitextil\\apitextil\\Services\\IVentaService.cs",
+              "RelativeDocumentMoniker": "apitextil\\Services\\IVentaService.cs",
+              "ToolTip": "C:\\Users\\USER\\source\\repos\\apitextil\\apitextil\\Services\\IVentaService.cs",
+              "RelativeToolTip": "apitextil\\Services\\IVentaService.cs",
+              "ViewState": "AgIAAAYAAAAAAAAAAIBJwB0AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-11T05:18:30.26Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 45,
+              "Title": "ITblEnviosService.cs",
+              "DocumentMoniker": "C:\\Users\\USER\\source\\repos\\apitextil\\apitextil\\Services\\ITblEnviosService.cs",
+              "RelativeDocumentMoniker": "apitextil\\Services\\ITblEnviosService.cs",
+              "ToolTip": "C:\\Users\\USER\\source\\repos\\apitextil\\apitextil\\Services\\ITblEnviosService.cs",
+              "RelativeToolTip": "apitextil\\Services\\ITblEnviosService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAIAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-05T02:07:10.547Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 37,
+              "Title": "Venta.cs",
+              "DocumentMoniker": "C:\\Users\\USER\\source\\repos\\apitextil\\apitextil\\Models\\Venta.cs",
+              "RelativeDocumentMoniker": "apitextil\\Models\\Venta.cs",
+              "ToolTip": "C:\\Users\\USER\\source\\repos\\apitextil\\apitextil\\Models\\Venta.cs",
+              "RelativeToolTip": "apitextil\\Models\\Venta.cs",
+              "ViewState": "AgIAABIAAAAAAAAAAAAmwBUAAAATAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-11T05:08:04.681Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\USER\\source\\repos\\apitextil\\apitextil\\Program.cs",
+              "RelativeDocumentMoniker": "apitextil\\Program.cs",
+              "ToolTip": "C:\\Users\\USER\\source\\repos\\apitextil\\apitextil\\Program.cs",
+              "RelativeToolTip": "apitextil\\Program.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAApAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-20T04:15:58.836Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 31,
+              "Title": "DetalleVenta.cs",
+              "DocumentMoniker": "C:\\Users\\USER\\source\\repos\\apitextil\\apitextil\\Models\\DetalleVenta.cs",
+              "RelativeDocumentMoniker": "apitextil\\Models\\DetalleVenta.cs",
+              "ToolTip": "C:\\Users\\USER\\source\\repos\\apitextil\\apitextil\\Models\\DetalleVenta.cs",
+              "RelativeToolTip": "apitextil\\Models\\DetalleVenta.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-11T07:20:41.229Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 44,
+              "Title": "EcommerceContext.cs",
+              "DocumentMoniker": "C:\\Users\\USER\\source\\repos\\apitextil\\apitextil\\Data\\EcommerceContext.cs",
+              "RelativeDocumentMoniker": "apitextil\\Data\\EcommerceContext.cs",
+              "ToolTip": "C:\\Users\\USER\\source\\repos\\apitextil\\apitextil\\Data\\EcommerceContext.cs",
+              "RelativeToolTip": "apitextil\\Data\\EcommerceContext.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-20T04:55:39.262Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 41,
+              "Title": "CreatePreferenceRequestDto.cs",
+              "DocumentMoniker": "C:\\Users\\USER\\source\\repos\\apitextil\\apitextil\\DTOs\\Orders\\CreatePreferenceRequestDto.cs",
+              "RelativeDocumentMoniker": "apitextil\\DTOs\\Orders\\CreatePreferenceRequestDto.cs",
+              "ToolTip": "C:\\Users\\USER\\source\\repos\\apitextil\\apitextil\\DTOs\\Orders\\CreatePreferenceRequestDto.cs",
+              "RelativeToolTip": "apitextil\\DTOs\\Orders\\CreatePreferenceRequestDto.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-08T02:42:39.051Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 53,
+              "Title": "DatabaseConnectionTester.cs",
+              "DocumentMoniker": "C:\\Users\\USER\\source\\repos\\apitextil\\apitextil\\DatabaseConnectionTester.cs",
+              "RelativeDocumentMoniker": "apitextil\\DatabaseConnectionTester.cs",
+              "ToolTip": "C:\\Users\\USER\\source\\repos\\apitextil\\apitextil\\DatabaseConnectionTester.cs",
+              "RelativeToolTip": "apitextil\\DatabaseConnectionTester.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-21T00:05:14.661Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 54,
+              "Title": "CartCleanupService.cs",
+              "DocumentMoniker": "C:\\Users\\USER\\source\\repos\\apitextil\\apitextil\\CartCleanupService.cs",
+              "RelativeDocumentMoniker": "apitextil\\CartCleanupService.cs",
+              "ToolTip": "C:\\Users\\USER\\source\\repos\\apitextil\\apitextil\\CartCleanupService.cs",
+              "RelativeToolTip": "apitextil\\CartCleanupService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAA+wAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-04T06:05:20.92Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "apitextil.http",
+              "DocumentMoniker": "C:\\Users\\USER\\source\\repos\\apitextil\\apitextil\\apitextil.http",
+              "RelativeDocumentMoniker": "apitextil\\apitextil.http",
+              "ToolTip": "C:\\Users\\USER\\source\\repos\\apitextil\\apitextil\\apitextil.http",
+              "RelativeToolTip": "apitextil\\apitextil.http",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003502|",
+              "WhenOpened": "2025-06-20T06:04:14.679Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 55,
+              "Title": "WeatherForecast.cs",
+              "DocumentMoniker": "C:\\Users\\USER\\source\\repos\\apitextil\\apitextil\\WeatherForecast.cs",
+              "RelativeDocumentMoniker": "apitextil\\WeatherForecast.cs",
+              "ToolTip": "C:\\Users\\USER\\source\\repos\\apitextil\\apitextil\\WeatherForecast.cs",
+              "RelativeToolTip": "apitextil\\WeatherForecast.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-20T06:04:28.846Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 34,
+              "Title": "TblEnviosDto.cs",
+              "DocumentMoniker": "C:\\Users\\USER\\source\\repos\\apitextil\\apitextil\\DTOs\\TblEnviosDto.cs",
+              "RelativeDocumentMoniker": "apitextil\\DTOs\\TblEnviosDto.cs",
+              "ToolTip": "C:\\Users\\USER\\source\\repos\\apitextil\\apitextil\\DTOs\\TblEnviosDto.cs",
+              "RelativeToolTip": "apitextil\\DTOs\\TblEnviosDto.cs",
+              "ViewState": "AgIAABsAAAAAAAAAAAAowEcAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-05T02:04:22.126Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 24,
+              "Title": "NiubizController.cs",
+              "DocumentMoniker": "C:\\Users\\USER\\source\\repos\\apitextil\\apitextil\\Controllers\\NiubizController.cs",
+              "RelativeDocumentMoniker": "apitextil\\Controllers\\NiubizController.cs",
+              "ToolTip": "C:\\Users\\USER\\source\\repos\\apitextil\\apitextil\\Controllers\\NiubizController.cs",
+              "RelativeToolTip": "apitextil\\Controllers\\NiubizController.cs",
+              "ViewState": "AgIAAB4AAAAAAAAAAAAkwCQAAABBAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-12T03:58:33.668Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 18,
+              "Title": "NiubizService.cs",
+              "DocumentMoniker": "C:\\Users\\USER\\source\\repos\\apitextil\\apitextil\\Services\\NiubizService.cs",
+              "RelativeDocumentMoniker": "apitextil\\Services\\NiubizService.cs",
+              "ToolTip": "C:\\Users\\USER\\source\\repos\\apitextil\\apitextil\\Services\\NiubizService.cs",
+              "RelativeToolTip": "apitextil\\Services\\NiubizService.cs",
+              "ViewState": "AgIAAGAAAAAAAAAAAAAuwJwAAAAoAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-12T03:53:18.978Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 27,
+              "Title": "MetodoPago.cs",
+              "DocumentMoniker": "C:\\Users\\USER\\source\\repos\\apitextil\\apitextil\\Models\\MetodoPago.cs",
+              "RelativeDocumentMoniker": "apitextil\\Models\\MetodoPago.cs",
+              "ToolTip": "C:\\Users\\USER\\source\\repos\\apitextil\\apitextil\\Models\\MetodoPago.cs",
+              "RelativeToolTip": "apitextil\\Models\\MetodoPago.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABEAAAAHAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-11T05:12:14.62Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 22,
+              "Title": "TblEnviosController.cs",
+              "DocumentMoniker": "C:\\Users\\USER\\source\\repos\\apitextil\\apitextil\\Controllers\\TblEnviosController.cs",
+              "RelativeDocumentMoniker": "apitextil\\Controllers\\TblEnviosController.cs",
+              "ToolTip": "C:\\Users\\USER\\source\\repos\\apitextil\\apitextil\\Controllers\\TblEnviosController.cs",
+              "RelativeToolTip": "apitextil\\Controllers\\TblEnviosController.cs",
+              "ViewState": "AgIAABAAAAAAAAAAAAAQwBQAAAAsAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-05T02:08:00.704Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 33,
+              "Title": "TblEnvios.cs",
+              "DocumentMoniker": "C:\\Users\\USER\\source\\repos\\apitextil\\apitextil\\Models\\TblEnvios.cs",
+              "RelativeDocumentMoniker": "apitextil\\Models\\TblEnvios.cs",
+              "ToolTip": "C:\\Users\\USER\\source\\repos\\apitextil\\apitextil\\Models\\TblEnvios.cs",
+              "RelativeToolTip": "apitextil\\Models\\TblEnvios.cs",
+              "ViewState": "AgIAACYAAAAAAAAAAAAswAMAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-05T02:03:01.709Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 36,
+              "Title": "tblusuario.cs",
+              "DocumentMoniker": "C:\\Users\\USER\\source\\repos\\apitextil\\apitextil\\Models\\tblusuario.cs",
+              "RelativeDocumentMoniker": "apitextil\\Models\\tblusuario.cs",
+              "ToolTip": "C:\\Users\\USER\\source\\repos\\apitextil\\apitextil\\Models\\tblusuario.cs",
+              "RelativeToolTip": "apitextil\\Models\\tblusuario.cs",
+              "ViewState": "AgIAAAgAAAAAAAAAAAAxwBIAAAAbAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-21T00:03:29.63Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 28,
+              "Title": "Productos.cs",
+              "DocumentMoniker": "C:\\Users\\USER\\source\\repos\\apitextil\\apitextil\\Models\\Productos.cs",
+              "RelativeDocumentMoniker": "apitextil\\Models\\Productos.cs",
+              "ToolTip": "C:\\Users\\USER\\source\\repos\\apitextil\\apitextil\\Models\\Productos.cs",
+              "RelativeToolTip": "apitextil\\Models\\Productos.cs",
+              "ViewState": "AgIAAD4AAAAAAAAAAAAUwAwAAAASAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-24T02:25:52.706Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "CartController.cs",
+              "DocumentMoniker": "C:\\Users\\USER\\source\\repos\\apitextil\\apitextil\\Controllers\\CartController.cs",
+              "RelativeDocumentMoniker": "apitextil\\Controllers\\CartController.cs",
+              "ToolTip": "C:\\Users\\USER\\source\\repos\\apitextil\\apitextil\\Controllers\\CartController.cs",
+              "RelativeToolTip": "apitextil\\Controllers\\CartController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-04T04:41:22.802Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 57,
+              "Title": "CartItemDto.cs",
+              "DocumentMoniker": "C:\\Users\\USER\\source\\repos\\apitextil\\apitextil\\DTOs\\CartItemDto.cs",
+              "RelativeDocumentMoniker": "apitextil\\DTOs\\CartItemDto.cs",
+              "ToolTip": "C:\\Users\\USER\\source\\repos\\apitextil\\apitextil\\DTOs\\CartItemDto.cs",
+              "RelativeToolTip": "apitextil\\DTOs\\CartItemDto.cs",
+              "ViewState": "AgIAAA4AAAAAAAAAAAAxwBAAAAA1AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-04T04:23:50.867Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 48,
+              "Title": "ProductosDto.cs",
+              "DocumentMoniker": "C:\\Users\\USER\\source\\repos\\apitextil\\apitextil\\DTOs\\ProductosDto.cs",
+              "RelativeDocumentMoniker": "apitextil\\DTOs\\ProductosDto.cs",
+              "ToolTip": "C:\\Users\\USER\\source\\repos\\apitextil\\apitextil\\DTOs\\ProductosDto.cs",
+              "RelativeToolTip": "apitextil\\DTOs\\ProductosDto.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-24T03:27:40.873Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 20,
+              "Title": "ICartService.cs",
+              "DocumentMoniker": "C:\\Users\\USER\\source\\repos\\apitextil\\apitextil\\Services\\ICartService.cs",
+              "RelativeDocumentMoniker": "apitextil\\Services\\ICartService.cs",
+              "ToolTip": "C:\\Users\\USER\\source\\repos\\apitextil\\apitextil\\Services\\ICartService.cs",
+              "RelativeToolTip": "apitextil\\Services\\ICartService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAABEAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-04T04:35:22.796Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 21,
+              "Title": "IAuthService.cs",
+              "DocumentMoniker": "C:\\Users\\USER\\source\\repos\\apitextil\\apitextil\\Services\\IAuthService.cs",
+              "RelativeDocumentMoniker": "apitextil\\Services\\IAuthService.cs",
+              "ToolTip": "C:\\Users\\USER\\source\\repos\\apitextil\\apitextil\\Services\\IAuthService.cs",
+              "RelativeToolTip": "apitextil\\Services\\IAuthService.cs",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAuwBcAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-21T00:20:37.147Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 19,
+              "Title": "IProductoService.cs",
+              "DocumentMoniker": "C:\\Users\\USER\\source\\repos\\apitextil\\apitextil\\Services\\IProductoService.cs",
+              "RelativeDocumentMoniker": "apitextil\\Services\\IProductoService.cs",
+              "ToolTip": "C:\\Users\\USER\\source\\repos\\apitextil\\apitextil\\Services\\IProductoService.cs",
+              "RelativeToolTip": "apitextil\\Services\\IProductoService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAABBAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-24T03:54:14.553Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "AuthController.cs",
+              "DocumentMoniker": "C:\\Users\\USER\\source\\repos\\apitextil\\apitextil\\Controllers\\AuthController.cs",
+              "RelativeDocumentMoniker": "apitextil\\Controllers\\AuthController.cs",
+              "ToolTip": "C:\\Users\\USER\\source\\repos\\apitextil\\apitextil\\Controllers\\AuthController.cs",
+              "RelativeToolTip": "apitextil\\Controllers\\AuthController.cs",
+              "ViewState": "AgIAAHEAAAAAAAAAAAAiwIYAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-21T00:25:22.993Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 26,
+              "Title": "AuthService.cs",
+              "DocumentMoniker": "C:\\Users\\USER\\source\\repos\\apitextil\\apitextil\\Services\\AuthService.cs",
+              "RelativeDocumentMoniker": "apitextil\\Services\\AuthService.cs",
+              "ToolTip": "C:\\Users\\USER\\source\\repos\\apitextil\\apitextil\\Services\\AuthService.cs",
+              "RelativeToolTip": "apitextil\\Services\\AuthService.cs",
+              "ViewState": "AgIAABEAAAAAAAAAAIBJwBYAAAAKAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-21T00:20:25.699Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 56,
+              "Title": "ProductoService.cs",
+              "DocumentMoniker": "C:\\Users\\USER\\source\\repos\\apitextil\\apitextil\\Services\\ProductoService.cs",
+              "RelativeDocumentMoniker": "apitextil\\Services\\ProductoService.cs",
+              "ToolTip": "C:\\Users\\USER\\source\\repos\\apitextil\\apitextil\\Services\\ProductoService.cs",
+              "RelativeToolTip": "apitextil\\Services\\ProductoService.cs",
+              "ViewState": "AgIAACIAAAAAAAAAAAAgwCAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-24T03:55:14.728Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 39,
+              "Title": "CartService.cs",
+              "DocumentMoniker": "C:\\Users\\USER\\source\\repos\\apitextil\\apitextil\\Services\\CartService.cs",
+              "RelativeDocumentMoniker": "apitextil\\Services\\CartService.cs",
+              "ToolTip": "C:\\Users\\USER\\source\\repos\\apitextil\\apitextil\\Services\\CartService.cs",
+              "RelativeToolTip": "apitextil\\Services\\CartService.cs",
+              "ViewState": "AgIAAOkAAAAAAAAAAAAAwPEAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-04T04:36:13.995Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 23,
+              "Title": "ProductosController.cs",
+              "DocumentMoniker": "C:\\Users\\USER\\source\\repos\\apitextil\\apitextil\\Controllers\\ProductosController.cs",
+              "RelativeDocumentMoniker": "apitextil\\Controllers\\ProductosController.cs",
+              "ToolTip": "C:\\Users\\USER\\source\\repos\\apitextil\\apitextil\\Controllers\\ProductosController.cs",
+              "RelativeToolTip": "apitextil\\Controllers\\ProductosController.cs",
+              "ViewState": "AgIAAM8AAAAAAAAAAAAgwNoAAAAqAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-24T03:35:34.928Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "WeatherForecastController.cs",
+              "DocumentMoniker": "C:\\Users\\USER\\source\\repos\\apitextil\\apitextil\\Controllers\\WeatherForecastController.cs",
+              "RelativeDocumentMoniker": "apitextil\\Controllers\\WeatherForecastController.cs",
+              "ToolTip": "C:\\Users\\USER\\source\\repos\\apitextil\\apitextil\\Controllers\\WeatherForecastController.cs",
+              "RelativeToolTip": "apitextil\\Controllers\\WeatherForecastController.cs",
+              "ViewState": "AgIAAAgAAAAAAAAAAAAAwBIAAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-21T00:58:58.85Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 52,
+              "Title": "ApplicationDbContext.cs",
+              "DocumentMoniker": "C:\\Users\\USER\\source\\repos\\apitextil\\apitextil\\Services\\ApplicationDbContext.cs",
+              "RelativeDocumentMoniker": "apitextil\\Services\\ApplicationDbContext.cs",
+              "ToolTip": "C:\\Users\\USER\\source\\repos\\apitextil\\apitextil\\Services\\ApplicationDbContext.cs",
+              "RelativeToolTip": "apitextil\\Services\\ApplicationDbContext.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABMAAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-04T06:06:39.784Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 49,
+              "Title": "apitextil",
+              "DocumentMoniker": "C:\\Users\\USER\\source\\repos\\apitextil\\apitextil\\apitextil.csproj",
+              "RelativeDocumentMoniker": "apitextil\\apitextil.csproj",
+              "ToolTip": "C:\\Users\\USER\\source\\repos\\apitextil\\apitextil\\apitextil.csproj",
+              "RelativeToolTip": "apitextil\\apitextil.csproj",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
+              "WhenOpened": "2025-06-20T07:07:30.057Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{6324226f-61b6-4f28-92ee-18d4b5fe1e48}"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

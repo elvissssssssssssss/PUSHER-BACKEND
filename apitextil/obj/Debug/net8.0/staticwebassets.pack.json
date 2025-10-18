@@ -1,0 +1,45 @@
+{
+  "Files": [
+    {
+      "Id": "C:\\Users\\labe\\Downloads\\NTX.SAC.BACKEND-main\\NTX.SAC.BACKEND-main\\apitextil\\apitextil\\wwwroot\\uploads\\3ee436f4-a1b1-4f4a-92bc-450dcb17c26f_casacaM7 - copia.jpg",
+      "PackagePath": "staticwebassets\\uploads\\3ee436f4-a1b1-4f4a-92bc-450dcb17c26f_casacaM7 - copia.jpg"
+    },
+    {
+      "Id": "C:\\Users\\labe\\Downloads\\NTX.SAC.BACKEND-main\\NTX.SAC.BACKEND-main\\apitextil\\apitextil\\wwwroot\\uploads\\56c6c5da-f6a5-48eb-b3e7-d7952243b88c_casacaM2 - copia.jpg",
+      "PackagePath": "staticwebassets\\uploads\\56c6c5da-f6a5-48eb-b3e7-d7952243b88c_casacaM2 - copia.jpg"
+    },
+    {
+      "Id": "C:\\Users\\labe\\Downloads\\NTX.SAC.BACKEND-main\\NTX.SAC.BACKEND-main\\apitextil\\apitextil\\wwwroot\\uploads\\9d53142f-97eb-46f1-910b-b858d1759fd9_casacaH2.png",
+      "PackagePath": "staticwebassets\\uploads\\9d53142f-97eb-46f1-910b-b858d1759fd9_casacaH2.png"
+    },
+    {
+      "Id": "C:\\Users\\labe\\Downloads\\NTX.SAC.BACKEND-main\\NTX.SAC.BACKEND-main\\apitextil\\apitextil\\wwwroot\\uploads\\envios\\1a3de9e1-2e3b-4cd4-a1ca-10cfd3821e6d_perfecta.jpg",
+      "PackagePath": "staticwebassets\\uploads\\envios\\1a3de9e1-2e3b-4cd4-a1ca-10cfd3821e6d_perfecta.jpg"
+    },
+    {
+      "Id": "C:\\Users\\labe\\Downloads\\NTX.SAC.BACKEND-main\\NTX.SAC.BACKEND-main\\apitextil\\apitextil\\wwwroot\\uploads\\envios\\1e5f3e2a-b804-4429-9fec-26082b836441_casacaM7 - copia.jpg",
+      "PackagePath": "staticwebassets\\uploads\\envios\\1e5f3e2a-b804-4429-9fec-26082b836441_casacaM7 - copia.jpg"
+    },
+    {
+      "Id": "C:\\Users\\labe\\Downloads\\NTX.SAC.BACKEND-main\\NTX.SAC.BACKEND-main\\apitextil\\apitextil\\wwwroot\\uploads\\productos\\casacaM8 - copia.jpg",
+      "PackagePath": "staticwebassets\\uploads\\productos\\casacaM8 - copia.jpg"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.apitextil.Microsoft.AspNetCore.StaticWebAssets.props",
+      "PackagePath": "build\\Microsoft.AspNetCore.StaticWebAssets.props"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.build.apitextil.props",
+      "PackagePath": "build\\apitextil.props"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.buildMultiTargeting.apitextil.props",
+      "PackagePath": "buildMultiTargeting\\apitextil.props"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.buildTransitive.apitextil.props",
+      "PackagePath": "buildTransitive\\apitextil.props"
+    }
+  ],
+  "ElementsToRemove": []
+}
