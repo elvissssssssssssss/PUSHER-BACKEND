@@ -307,6 +307,22 @@
   },
   {
     "ContainingType": "apitextil.Controllers.ChatController",
+    "Method": "EnviarContacto",
+    "RelativePath": "api/Chat/contacto",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "dto",
+        "Type": "apitextil.DTOs.AtencionClienteDto",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "apitextil.Controllers.ChatController",
     "Method": "Enviar",
     "RelativePath": "api/Chat/enviar",
     "HttpMethod": "POST",
@@ -316,6 +332,154 @@
       {
         "Name": "mensaje",
         "Type": "apitextil.DTOs.ChatMessageDto",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "apitextil.Controllers.ChatController",
+    "Method": "EnviarYGuardar",
+    "RelativePath": "api/Chat/enviar-y-guardar",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "dto",
+        "Type": "apitextil.Controllers.ChatController\u002BEnviarYGuardarDto",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "apitextil.Controllers.ChatController",
+    "Method": "GuardarMensajeChat",
+    "RelativePath": "api/Chat/guardar-mensaje",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "dto",
+        "Type": "apitextil.DTOs.MensajeChatDto",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "apitextil.Controllers.ChatController",
+    "Method": "ObtenerHistorial",
+    "RelativePath": "api/Chat/historial/{atencionId}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "atencionId",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "apitextil.Controllers.ChatController",
+    "Method": "ObtenerHistorialPorUsuario",
+    "RelativePath": "api/Chat/historial/usuario/{userId}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "userId",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "apitextil.Controllers.ChatController",
+    "Method": "MarcarComoLeidos",
+    "RelativePath": "api/Chat/marcar-leidos/{atencionId}/{emisorTipo}",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "atencionId",
+        "Type": "System.Int32",
+        "IsRequired": true
+      },
+      {
+        "Name": "emisorTipo",
+        "Type": "System.String",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "apitextil.Controllers.ChatController",
+    "Method": "ObtenerMensajes",
+    "RelativePath": "api/Chat/mensajes",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "apitextil.Controllers.ChatController",
+    "Method": "ObtenerMensajePorId",
+    "RelativePath": "api/Chat/mensajes/{id}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "apitextil.Controllers.ChatController",
+    "Method": "ActualizarEstado",
+    "RelativePath": "api/Chat/mensajes/{id}/estado",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      },
+      {
+        "Name": "dto",
+        "Type": "apitextil.Controllers.ActualizarEstadoDto",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "apitextil.Controllers.ChatController",
+    "Method": "ObtenerMensajesPorEstado",
+    "RelativePath": "api/Chat/mensajes/estado/{estado}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "estado",
+        "Type": "System.String",
         "IsRequired": true
       }
     ],

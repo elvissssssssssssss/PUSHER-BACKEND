@@ -39,6 +39,9 @@ builder.Services.AddHttpClient<NiubizService>();
 builder.Services.AddScoped<IVentaService, VentaService>();
 builder.Services.AddHttpClient(); // para llamadas a Nubefact
 
+builder.Services.AddScoped<IAtencionClienteService, AtencionClienteService>();
+builder.Services.AddScoped<IMensajeChatService, MensajeChatService>();
+
 
 
 // Para permitir archivos grandes (opcional)

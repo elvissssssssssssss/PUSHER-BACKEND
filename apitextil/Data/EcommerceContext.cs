@@ -24,6 +24,8 @@ namespace apitextil.Data
         // ✅ Correcto
         // ✅ Correcto
         public DbSet<MetodoPago> MetodoPagos { get; set; }
+        public DbSet<TblAtencionCliente> TblAtencionCliente { get; set; }
+        public DbSet<TblMensajesChat> TblMensajesChat { get; set; }
 
 
 

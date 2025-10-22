@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\labe\\Downloads\\NTX.SAC.BACKEND-main\\NTX.SAC.BACKEND-main\\apitextil\\apitextil\\apitextil.csproj": {}
+    "C:\\Users\\labe\\Downloads\\apitextil\\apitextil\\apitextil.csproj": {}
   },
   "projects": {
-    "C:\\Users\\labe\\Downloads\\NTX.SAC.BACKEND-main\\NTX.SAC.BACKEND-main\\apitextil\\apitextil\\apitextil.csproj": {
+    "C:\\Users\\labe\\Downloads\\apitextil\\apitextil\\apitextil.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\labe\\Downloads\\NTX.SAC.BACKEND-main\\NTX.SAC.BACKEND-main\\apitextil\\apitextil\\apitextil.csproj",
+        "projectUniqueName": "C:\\Users\\labe\\Downloads\\apitextil\\apitextil\\apitextil.csproj",
         "projectName": "apitextil",
-        "projectPath": "C:\\Users\\labe\\Downloads\\NTX.SAC.BACKEND-main\\NTX.SAC.BACKEND-main\\apitextil\\apitextil\\apitextil.csproj",
+        "projectPath": "C:\\Users\\labe\\Downloads\\apitextil\\apitextil\\apitextil.csproj",
         "packagesPath": "C:\\Users\\labe\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\labe\\Downloads\\NTX.SAC.BACKEND-main\\NTX.SAC.BACKEND-main\\apitextil\\apitextil\\obj\\",
+        "outputPath": "C:\\Users\\labe\\Downloads\\apitextil\\apitextil\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
