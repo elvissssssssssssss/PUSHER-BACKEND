@@ -108,7 +108,7 @@ public class ComprobantesController : ControllerBase
             decimal igv = total - gravada;
 
             _logger.LogInformation("💰 Totales - Total: {Total}, Gravada: {Gravada}, IGV: {IGV}", total, gravada, igv);
-
+             
             // 5) Payload para Nubefact (sin 'numero' salvo forzado)
             int? numeroForzado = (dto.NumeroForzado.HasValue && dto.NumeroForzado.Value > 0)
                 ? dto.NumeroForzado.Value

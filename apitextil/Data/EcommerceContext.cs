@@ -26,7 +26,7 @@ namespace apitextil.Data
         public DbSet<MetodoPago> MetodoPagos { get; set; }
         public DbSet<TblAtencionCliente> TblAtencionCliente { get; set; }
         public DbSet<TblMensajesChat> TblMensajesChat { get; set; }
-
+         
 
 
 
@@ -37,7 +37,9 @@ namespace apitextil.Data
         public DbSet<EstadoEnvio> EstadoEnvios { get; set; }
         public DbSet<SeguimientoEnvio> SeguimientoEnvios { get; set; }
         public DbSet<DocumentoEnvio> DocumentoEnvios { get; set; }
+        public DbSet<LoginAdmin> LoginAdmins { get; set; }
 
+        public DbSet<Rol> Roles { get; set; }
 
 
 

@@ -4,7 +4,7 @@
     using global::apitextil.DTOs.apitextil.DTOs;
     using global::apitextil.Services.apitextil.Services;
     // Controllers/AuthController.cs
-    using Microsoft.AspNetCore.Authorization;
+ 
     using Microsoft.AspNetCore.Mvc;
     using System.Security.Claims;
 
@@ -122,7 +122,7 @@
                 var user = await _authService.GetUserById(id);
 
                 if (user == null)
-                {
+                {   
                     return NotFound(new { message = "Usuario no encontrado" });
                 }
 

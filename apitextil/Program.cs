@@ -60,7 +60,11 @@ builder.Services.AddHttpClient(); // para llamadas a Nubefact
 builder.Services.AddScoped<IAtencionClienteService, AtencionClienteService>();
 builder.Services.AddScoped<IMensajeChatService, MensajeChatService>();
 
+builder.Services.AddScoped<AdminAuthService>();
 
+builder.Services.AddScoped<iRoleService, RoleService>();
+
+builder.Services.AddScoped<AdminManagementService>();
 
 // Para permitir archivos grandes (opcional)
 builder.Services.Configure<FormOptions>(options =>
