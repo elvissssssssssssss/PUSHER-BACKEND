@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "x4jPiSVbrTQ=",
+  "dgSpecHash": "n9dtnIjjJb8=",
   "success": true,
-  "projectFilePath": "C:\\Users\\USER\\Documents\\GitHub\\proyecto-nubecaf-backend\\apitextil\\apitextil\\apitextil.csproj",
+  "projectFilePath": "C:\\Users\\USER\\Documents\\GIT-HUB-ACTUAL-\\PUSHER-BACKEND\\apitextil\\apitextil.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\USER\\.nuget\\packages\\bcrypt.net-next\\4.0.3\\bcrypt.net-next.4.0.3.nupkg.sha512",
     "C:\\Users\\USER\\.nuget\\packages\\bouncycastle.cryptography\\2.5.1\\bouncycastle.cryptography.2.5.1.nupkg.sha512",
