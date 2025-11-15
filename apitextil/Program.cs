@@ -95,13 +95,18 @@ builder.Services.ConfigureHttpJsonOptions(options =>
 });
 
 // CORS
+// CORS - CORREGIDO
 builder.Services.AddCors(options =>
 {
-    options.AddPolicy("AllowFlutter", policy =>
+    options.AddPolicy("AllowAll", policy =>
     {
-        policy.AllowAnyOrigin()
+        policy.WithOrigins(
+                "http://localhost:4200",                    // ? Angular local
+                "https://tu-dominio-vercel.vercel.app"      // ? TU DOMINIO VERCEL REAL
+              )
               .AllowAnyHeader()
-              .AllowAnyMethod();
+              .AllowAnyMethod()
+              .AllowCredentials();
     });
 });
 
@@ -155,7 +160,6 @@ app.UseHttpsRedirection();
 app.UseCors("AllowFlutter");
 app.UseStaticFiles();
 app.UseRouting();
-app.UseCors();
 app.UseAuthentication();
 app.UseAuthorization();
 
