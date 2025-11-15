@@ -1,5 +1,5 @@
 
-// Program.cs (Configuración completa)
+// Program.cs (Configuraci?n completa)
 using apitextil.Data;
 
 using apitextil.Services;
@@ -23,7 +23,7 @@ var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddControllers();
 
 // Database
-// Database con reintentos habilitados y configuración segura
+// Database con reintentos habilitados y configuraci?n segura
 builder.Services.AddDbContext<EcommerceContext>(options =>
 {
     var cs = builder.Configuration.GetConnectionString("DefaultConnection");
@@ -33,7 +33,7 @@ builder.Services.AddDbContext<EcommerceContext>(options =>
         ServerVersion.AutoDetect(cs),
         mySqlOptions =>
         {
-            // ?? Reintentos automáticos en fallos transitorios
+            // ?? Reintentos autom?ticos en fallos transitorios
             mySqlOptions.EnableRetryOnFailure(
                 maxRetryCount: 5,
                 maxRetryDelay: TimeSpan.FromSeconds(10),
@@ -48,7 +48,7 @@ builder.Services.AddScoped<IAuthService, AuthService>();
 builder.Services.AddScoped<ICartService, CartService>();
 // Agregar el servicio de TblEnvios
 builder.Services.AddScoped<ITblEnviosService, TblEnviosService>();
-// Agregar el servicio de envíos de voleta 
+// Agregar el servicio de env?os de voleta 
 builder.Services.AddScoped<IEnvioService, EnvioService>();
 // Program.cs
 builder.Services.AddScoped<IVentaService, VentaService>();
@@ -95,18 +95,13 @@ builder.Services.ConfigureHttpJsonOptions(options =>
 });
 
 // CORS
-// CORS - CORREGIDO
 builder.Services.AddCors(options =>
 {
     options.AddPolicy("AllowAll", policy =>
     {
-        policy.WithOrigins(
-                "http://localhost:4200",                    // ? Angular local
-                "https://tu-dominio-vercel.vercel.app"      // ? TU DOMINIO VERCEL REAL
-              )
+        policy.AllowAnyOrigin()
               .AllowAnyHeader()
-              .AllowAnyMethod()
-              .AllowCredentials();
+              .AllowAnyMethod();
     });
 });
 
@@ -157,9 +152,10 @@ if (app.Environment.IsDevelopment())
 
 app.UseHttpsRedirection();
 
-app.UseCors("AllowFlutter");
+app.UseCors("AllowAll");
 app.UseStaticFiles();
 app.UseRouting();
+
 app.UseAuthentication();
 app.UseAuthorization();
 
