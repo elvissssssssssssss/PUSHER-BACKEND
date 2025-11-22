@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("apitextil")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+0cfd8d1bd78973c52238e1ec1fb59d38047faab4")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+86d28f72493343c4defc4a66347d8c7c900f470b")]
 [assembly: System.Reflection.AssemblyProductAttribute("apitextil")]
 [assembly: System.Reflection.AssemblyTitleAttribute("apitextil")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
