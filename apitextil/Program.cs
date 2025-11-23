@@ -148,6 +148,24 @@ builder.Services.AddSwaggerGen(c =>
 });
 
 var app = builder.Build();
+// ?????? AGREGAR ESTO ANTES DE UseStaticFiles ??????
+
+// Crear carpeta uploads si no existe
+var uploadsPath = Path.Combine(Directory.GetCurrentDirectory(), "uploads");
+if (!Directory.Exists(uploadsPath))
+{
+    Directory.CreateDirectory(uploadsPath);
+    Console.WriteLine($"? Carpeta uploads creada en: {uploadsPath}");
+}
+
+var enviosPath = Path.Combine(uploadsPath, "envios");
+if (!Directory.Exists(enviosPath))
+{
+    Directory.CreateDirectory(enviosPath);
+    Console.WriteLine($"? Carpeta envios creada en: {enviosPath}");
+}
+
+// ?????? FIN DE CREACIÓN DE CARPETAS ??????
 
 // Configure the HTTP request pipeline.
 if (app.Environment.IsDevelopment())
@@ -157,23 +175,18 @@ if (app.Environment.IsDevelopment())
 }
 
 app.UseHttpsRedirection();
-
 app.UseCors("AllowAll");
-// ?????? CONFIGURACIÓN DE ARCHIVOS ESTÁTICOS - ESTO ES LO IMPORTANTE ??????
 
-// Sirve archivos de wwwroot (productos, etc.)
+// Configuración de archivos estáticos
 app.UseStaticFiles();
 
-// Sirve archivos de la carpeta uploads (documentos de envío)
 app.UseStaticFiles(new StaticFileOptions
 {
-    FileProvider = new PhysicalFileProvider(
-        Path.Combine(Directory.GetCurrentDirectory(), "uploads")),
+    FileProvider = new PhysicalFileProvider(uploadsPath), // ?? Usar la variable
     RequestPath = "/uploads"
 });
 
 app.UseRouting();
-
 app.UseAuthentication();
 app.UseAuthorization();
 
