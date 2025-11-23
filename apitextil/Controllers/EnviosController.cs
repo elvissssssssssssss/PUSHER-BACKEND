@@ -160,6 +160,7 @@ namespace apitextil.Controllers
         }
 
         [HttpGet("mis-seguimientos")]
+        [AllowAnonymous] // ⬅️ AGREGAR ESTA LÍNEA
         public async Task<IActionResult> GetMisSeguimientos()
         {
             var userIdClaim = User.FindFirst("id")?.Value;

@@ -1,6 +1,7 @@
 
 // Program.cs (Configuraci?n completa)
 using apitextil.Data;
+using Microsoft.Extensions.FileProviders;
 
 using apitextil.Services;
 using apitextil.Services.apitextil.Services;
@@ -158,7 +159,19 @@ if (app.Environment.IsDevelopment())
 app.UseHttpsRedirection();
 
 app.UseCors("AllowAll");
+// ?????? CONFIGURACIÓN DE ARCHIVOS ESTÁTICOS - ESTO ES LO IMPORTANTE ??????
+
+// Sirve archivos de wwwroot (productos, etc.)
 app.UseStaticFiles();
+
+// Sirve archivos de la carpeta uploads (documentos de envío)
+app.UseStaticFiles(new StaticFileOptions
+{
+    FileProvider = new PhysicalFileProvider(
+        Path.Combine(Directory.GetCurrentDirectory(), "uploads")),
+    RequestPath = "/uploads"
+});
+
 app.UseRouting();
 
 app.UseAuthentication();
