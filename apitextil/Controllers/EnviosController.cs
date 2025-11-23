@@ -175,18 +175,23 @@ namespace apitextil.Controllers
             return Ok(envios);
         }
 
-        // ⬇️ NUEVO: Endpoint para autenticación de Pusher (necesario para canales privados)
         [HttpPost("pusher/auth")]
-        [AllowAnonymous] // ⬅️ PERMITE ACCESO SIN TOKEN
+        [AllowAnonymous]
         public IActionResult AuthPusher([FromBody] PusherAuthRequest request)
         {
             Console.WriteLine("🔐 =================================");
-            Console.WriteLine($"🔐 AuthPusher llamado (sin autenticación)");
+            Console.WriteLine($"🔐 AuthPusher llamado");
             Console.WriteLine($"📡 Channel: {request?.channel_name ?? "NULL"}");
             Console.WriteLine($"🆔 Socket ID: {request?.socket_id ?? "NULL"}");
 
+            // Validar request
+            if (request == null || string.IsNullOrEmpty(request.channel_name) || string.IsNullOrEmpty(request.socket_id))
+            {
+                Console.WriteLine("❌ Request inválido");
+                return BadRequest(new { error = "channel_name y socket_id son requeridos" });
+            }
+
             // Extraer userId del nombre del canal
-            // Formato esperado: "private-user-28"
             var channelParts = request.channel_name.Split('-');
             if (channelParts.Length != 3 || channelParts[0] != "private" || channelParts[1] != "user")
             {
@@ -200,27 +205,47 @@ namespace apitextil.Controllers
                 return BadRequest(new { error = "User ID inválido" });
             }
 
-            Console.WriteLine($"✅ User ID extraído del canal: {userId}");
+            Console.WriteLine($"✅ User ID extraído: {userId}");
 
-            var pusherOptions = new PusherOptions
+            try
             {
-                Cluster = "mt1",
-                Encrypted = true
-            };
+                var pusherOptions = new PusherOptions
+                {
+                    Cluster = "mt1",
+                    Encrypted = true
+                };
 
-            var pusher = new Pusher(
-                "2062327",
-                "058be5b82a25fa9d45d6",
-                "8c176f166837db10cf76",
-                pusherOptions
-            );
+                var pusher = new Pusher(
+                    "2062327",
+                    "058be5b82a25fa9d45d6",
+                    "8c176f166837db10cf76",
+                    pusherOptions
+                );
 
-            var auth = pusher.Authenticate(request.channel_name, request.socket_id);
-            Console.WriteLine($"✅ Autenticación Pusher exitosa para usuario {userId}");
-            Console.WriteLine("🔐 =================================");
+                // ⬇️ AUTENTICAR SIN CHANNEL DATA (para canales privados simples)
+                var auth = pusher.Authenticate(request.channel_name, request.socket_id);
 
-            return Ok(auth.ToJson());
+                // ⬇️ CONVERTIR A OBJETO LIMPIO
+                var authResponse = new
+                {
+                    auth = auth.auth,
+                    channel_data = "", // ⬅️ VACÍO para canales privados (no presence)
+                    shared_secret = "" // ⬅️ VACÍO
+                };
+
+                Console.WriteLine($"✅ Autenticación exitosa: {authResponse.auth}");
+                Console.WriteLine("🔐 =================================");
+
+                return Ok(authResponse);
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine($"❌ Error en Pusher.Authenticate: {ex.Message}");
+                Console.WriteLine($"   StackTrace: {ex.StackTrace}");
+                return StatusCode(500, new { error = "Error al autenticar con Pusher", details = ex.Message });
+            }
         }
+
 
 
     }
