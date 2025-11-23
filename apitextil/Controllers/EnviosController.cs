@@ -1,10 +1,11 @@
-﻿using apitextil.DTOs;
+﻿using apitextil.Data; // tu DbContext
+using apitextil.DTOs;
 using apitextil.Services;
 using apitextil.Services.apitextil.Services;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
-using apitextil.Data; // tu DbContext
+using PusherServer;
 
 namespace apitextil.Controllers
 {
@@ -15,16 +16,18 @@ namespace apitextil.Controllers
     {
         private readonly IEnvioService _envioService;
         private readonly EcommerceContext _context;
-       
+        private readonly IEnvioNotificacionService _notificacionService; // ⬅️ NUEVO
 
-        public EnviosController(IEnvioService envioService, EcommerceContext context)
+
+        public EnviosController(IEnvioService envioService, EcommerceContext context,
+             IEnvioNotificacionService notificacionService) // ⬅️ NUEVO)
         {
             _envioService = envioService;
             _context = context;
+            _notificacionService = notificacionService; // ⬅️ NUEVO                  
         }
 
 
-     
         [HttpGet("estados")]
         public async Task<IActionResult> GetEstadosEnvio()
         {
@@ -54,16 +57,25 @@ namespace apitextil.Controllers
         }
 
         [HttpPost("seguimiento")]
-      //  [Authorize(Roles = "Administrador")]
         public async Task<IActionResult> AddSeguimiento([FromBody] CreateSeguimientoEnvioDto seguimientoDto)
         {
             try
             {
+                // 1. Agregar el seguimiento
                 var result = await _envioService.AddSeguimientoAsync(seguimientoDto);
-                if (result)
-                    return Ok(new { message = "Seguimiento agregado correctamente" });
-                else
+
+                if (!result)
                     return BadRequest(new { message = "Error al agregar seguimiento" });
+
+                // 2. ENVIAR NOTIFICACIÓN PUSH ⬅️ NUEVO
+                await _notificacionService.NotificarActualizacionEnvio(
+                    seguimientoDto.venta_id,
+                    seguimientoDto.estado_id,
+                    seguimientoDto.ubicacion_actual,
+                    seguimientoDto.observaciones
+                );
+
+                return Ok(new { message = "Seguimiento agregado y notificación enviada" });
             }
             catch (Exception ex)
             {
@@ -86,7 +98,6 @@ namespace apitextil.Controllers
         }
 
         [HttpPost("documentos")]
-       // [Authorize(Roles = "Administrador")]
         public async Task<IActionResult> AddDocumento([FromBody] CreateDocumentoEnvioDto documentoDto)
         {
             try
@@ -104,7 +115,6 @@ namespace apitextil.Controllers
         }
 
         [HttpPost("upload-documento")]
-        //[Authorize(Roles = "Administrador")]
         public async Task<IActionResult> UploadDocumento([FromForm] UploadDocumentoDto uploadDto)
         {
             try
@@ -132,7 +142,6 @@ namespace apitextil.Controllers
             }
         }
 
-        
         [HttpPost("confirmar-entrega/{ventaId}")]
         public async Task<IActionResult> ConfirmarEntrega(int ventaId)
         {
@@ -150,9 +159,7 @@ namespace apitextil.Controllers
             }
         }
 
-
         [HttpGet("mis-seguimientos")]
-       
         public async Task<IActionResult> GetMisSeguimientos()
         {
             var userIdClaim = User.FindFirst("id")?.Value;
@@ -168,8 +175,43 @@ namespace apitextil.Controllers
             return Ok(envios);
         }
 
+        // ⬇️ NUEVO: Endpoint para autenticación de Pusher (necesario para canales privados)
+        [HttpPost("pusher/auth")]
+        public IActionResult AuthPusher([FromBody] PusherAuthRequest request)
+        {
+            var userIdClaim = User.FindFirst("id")?.Value;
+            if (string.IsNullOrEmpty(userIdClaim))
+                return Unauthorized();
 
+            var userId = int.Parse(userIdClaim);
 
+            // Verificar que el usuario solo pueda suscribirse a su propio canal
+            if (request.channel_name != $"private-user-{userId}")
+                return Forbid();
 
+            var pusherOptions = new PusherOptions
+            {
+                Cluster = "mt1",
+                Encrypted = true
+            };
+
+            var pusher = new Pusher(
+                "2062327",
+                "058be5b82a25fa9d45d6",
+                "8c176f166837db10cf76",
+                pusherOptions
+            );
+
+            var auth = pusher.Authenticate(request.channel_name, request.socket_id);
+
+            return Ok(auth.ToJson());
+        }
+    }
+
+    // ⬇️ NUEVO: Clase para la solicitud de autenticación
+    public class PusherAuthRequest
+    {
+        public string socket_id { get; set; }
+        public string channel_name { get; set; }
     }
 }

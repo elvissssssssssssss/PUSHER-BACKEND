@@ -425,10 +425,10 @@ C:\Users\USER\Documents\GIT-HUB-ACTUAL-\PUSHER-BACKEND\apitextil\obj\Debug\net8.
 C:\Users\USER\Documents\GIT-HUB-ACTUAL-\PUSHER-BACKEND\apitextil\obj\Debug\net8.0\staticwebassets.build.json.cache
 C:\Users\USER\Documents\GIT-HUB-ACTUAL-\PUSHER-BACKEND\apitextil\obj\Debug\net8.0\staticwebassets.development.json
 C:\Users\USER\Documents\GIT-HUB-ACTUAL-\PUSHER-BACKEND\apitextil\obj\Debug\net8.0\staticwebassets.build.endpoints.json
-C:\Users\USER\Documents\GIT-HUB-ACTUAL-\PUSHER-BACKEND\apitextil\obj\Debug\net8.0\staticwebassets.upToDateCheck.txt
 C:\Users\USER\Documents\GIT-HUB-ACTUAL-\PUSHER-BACKEND\apitextil\obj\Debug\net8.0\apitextil.csproj.Up2Date
 C:\Users\USER\Documents\GIT-HUB-ACTUAL-\PUSHER-BACKEND\apitextil\obj\Debug\net8.0\apitextil.dll
 C:\Users\USER\Documents\GIT-HUB-ACTUAL-\PUSHER-BACKEND\apitextil\obj\Debug\net8.0\refint\apitextil.dll
 C:\Users\USER\Documents\GIT-HUB-ACTUAL-\PUSHER-BACKEND\apitextil\obj\Debug\net8.0\apitextil.pdb
 C:\Users\USER\Documents\GIT-HUB-ACTUAL-\PUSHER-BACKEND\apitextil\obj\Debug\net8.0\apitextil.genruntimeconfig.cache
 C:\Users\USER\Documents\GIT-HUB-ACTUAL-\PUSHER-BACKEND\apitextil\obj\Debug\net8.0\ref\apitextil.dll
+C:\Users\USER\Documents\GIT-HUB-ACTUAL-\PUSHER-BACKEND\apitextil\obj\Debug\net8.0\staticwebassets.upToDateCheck.txt

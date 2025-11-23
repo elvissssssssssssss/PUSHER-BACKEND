@@ -711,6 +711,22 @@
   },
   {
     "ContainingType": "apitextil.Controllers.EnviosController",
+    "Method": "AuthPusher",
+    "RelativePath": "api/Envios/pusher/auth",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "request",
+        "Type": "apitextil.Controllers.PusherAuthRequest",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "apitextil.Controllers.EnviosController",
     "Method": "AddSeguimiento",
     "RelativePath": "api/Envios/seguimiento",
     "HttpMethod": "POST",

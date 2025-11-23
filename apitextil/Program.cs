@@ -65,6 +65,9 @@ builder.Services.AddScoped<AdminAuthService>();
 builder.Services.AddScoped<iRoleService, RoleService>();
 
 builder.Services.AddScoped<AdminManagementService>();
+// Busca donde están tus otros servicios y agrega:
+builder.Services.AddScoped<IEnvioNotificacionService, EnvioNotificacionService>();
+
 
 // Para permitir archivos grandes (opcional)
 builder.Services.Configure<FormOptions>(options =>

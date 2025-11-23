@@ -1282,6 +1282,37 @@
         }
       }
     },
+    "/api/Envios/pusher/auth": {
+      "post": {
+        "tags": [
+          "Envios"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/PusherAuthRequest"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/PusherAuthRequest"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/PusherAuthRequest"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
     "/api/Niubiz/token": {
       "get": {
         "tags": [
@@ -3310,6 +3341,20 @@
             "items": {
               "$ref": "#/components/schemas/ProductoDto"
             },
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "PusherAuthRequest": {
+        "type": "object",
+        "properties": {
+          "socket_id": {
+            "type": "string",
+            "nullable": true
+          },
+          "channel_name": {
+            "type": "string",
             "nullable": true
           }
         },
