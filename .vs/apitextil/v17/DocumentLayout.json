@@ -3,8 +3,16 @@
   "WorkspaceRootPath": "C:\\Users\\USER\\Documents\\GIT-HUB-ACTUAL-\\PUSHER-BACKEND\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{C68D0803-E339-4F2C-BAD4-46369BEAA511}|apitextil\\apitextil.csproj|c:\\users\\user\\documents\\git-hub-actual-\\pusher-backend\\apitextil\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C68D0803-E339-4F2C-BAD4-46369BEAA511}|apitextil\\apitextil.csproj|solutionrelative:apitextil\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{C68D0803-E339-4F2C-BAD4-46369BEAA511}|apitextil\\apitextil.csproj|c:\\users\\user\\documents\\git-hub-actual-\\pusher-backend\\apitextil\\controllers\\envioscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{C68D0803-E339-4F2C-BAD4-46369BEAA511}|apitextil\\apitextil.csproj|solutionrelative:apitextil\\controllers\\envioscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C68D0803-E339-4F2C-BAD4-46369BEAA511}|apitextil\\apitextil.csproj|c:\\users\\user\\documents\\git-hub-actual-\\pusher-backend\\apitextil\\databaseconnectiontester.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C68D0803-E339-4F2C-BAD4-46369BEAA511}|apitextil\\apitextil.csproj|solutionrelative:apitextil\\databaseconnectiontester.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{C68D0803-E339-4F2C-BAD4-46369BEAA511}|apitextil\\apitextil.csproj|c:\\users\\user\\documents\\git-hub-actual-\\pusher-backend\\apitextil\\services\\envionotificacionservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -21,10 +29,6 @@
     {
       "AbsoluteMoniker": "D:0:0:{C68D0803-E339-4F2C-BAD4-46369BEAA511}|apitextil\\apitextil.csproj|c:\\users\\user\\documents\\git-hub-actual-\\pusher-backend\\apitextil\\data\\ecommercecontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{C68D0803-E339-4F2C-BAD4-46369BEAA511}|apitextil\\apitextil.csproj|solutionrelative:apitextil\\data\\ecommercecontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{C68D0803-E339-4F2C-BAD4-46369BEAA511}|apitextil\\apitextil.csproj|c:\\users\\user\\documents\\git-hub-actual-\\pusher-backend\\apitextil\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{C68D0803-E339-4F2C-BAD4-46369BEAA511}|apitextil\\apitextil.csproj|solutionrelative:apitextil\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{C68D0803-E339-4F2C-BAD4-46369BEAA511}|apitextil\\apitextil.csproj|c:\\users\\user\\documents\\git-hub-actual-\\pusher-backend\\apitextil\\services\\envioservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -191,10 +195,6 @@
       "RelativeMoniker": "D:0:0:{C68D0803-E339-4F2C-BAD4-46369BEAA511}|apitextil\\apitextil.csproj|solutionrelative:apitextil\\models\\detalleventa.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{C68D0803-E339-4F2C-BAD4-46369BEAA511}|apitextil\\apitextil.csproj|c:\\users\\user\\documents\\git-hub-actual-\\pusher-backend\\apitextil\\databaseconnectiontester.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{C68D0803-E339-4F2C-BAD4-46369BEAA511}|apitextil\\apitextil.csproj|solutionrelative:apitextil\\databaseconnectiontester.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{C68D0803-E339-4F2C-BAD4-46369BEAA511}|apitextil\\apitextil.csproj|c:\\users\\user\\documents\\git-hub-actual-\\pusher-backend\\apitextil\\cartcleanupservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{C68D0803-E339-4F2C-BAD4-46369BEAA511}|apitextil\\apitextil.csproj|solutionrelative:apitextil\\cartcleanupservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
@@ -278,11 +278,11 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 15,
+          "SelectedChildIndex": 39,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 24,
+              "DocumentIndex": 25,
               "Title": "apitextil.csproj",
               "DocumentMoniker": "C:\\Users\\USER\\Documents\\GIT-HUB-ACTUAL-\\PUSHER-BACKEND\\apitextil\\apitextil.csproj",
               "RelativeDocumentMoniker": "apitextil\\apitextil.csproj",
@@ -295,7 +295,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 3,
               "Title": "EnvioNotificacionService.cs",
               "DocumentMoniker": "C:\\Users\\USER\\Documents\\GIT-HUB-ACTUAL-\\PUSHER-BACKEND\\apitextil\\Services\\EnvioNotificacionService.cs",
               "RelativeDocumentMoniker": "apitextil\\Services\\EnvioNotificacionService.cs",
@@ -303,12 +303,11 @@
               "RelativeToolTip": "apitextil\\Services\\EnvioNotificacionService.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAIAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-23T00:53:16.954Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-11-23T00:53:16.954Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 4,
               "Title": "NotificationService.cs",
               "DocumentMoniker": "C:\\Users\\USER\\Documents\\GIT-HUB-ACTUAL-\\PUSHER-BACKEND\\apitextil\\Services\\NotificationService.cs",
               "RelativeDocumentMoniker": "apitextil\\Services\\NotificationService.cs",
@@ -316,12 +315,11 @@
               "RelativeToolTip": "apitextil\\Services\\NotificationService.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAACkAAAAsAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-23T00:49:45.251Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-11-23T00:49:45.251Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 22,
+              "DocumentIndex": 23,
               "Title": "appsettings.Development.json",
               "DocumentMoniker": "C:\\Users\\USER\\Documents\\GIT-HUB-ACTUAL-\\PUSHER-BACKEND\\apitextil\\appsettings.Development.json",
               "RelativeDocumentMoniker": "apitextil\\appsettings.Development.json",
@@ -333,7 +331,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 27,
+              "DocumentIndex": 28,
               "Title": "iAtencionClienteService.cs",
               "DocumentMoniker": "C:\\Users\\USER\\Documents\\GIT-HUB-ACTUAL-\\PUSHER-BACKEND\\apitextil\\Services\\iAtencionClienteService.cs",
               "RelativeDocumentMoniker": "apitextil\\Services\\iAtencionClienteService.cs",
@@ -345,7 +343,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 28,
+              "DocumentIndex": 29,
               "Title": "AtencionClienteDto.cs",
               "DocumentMoniker": "C:\\Users\\USER\\Documents\\GIT-HUB-ACTUAL-\\PUSHER-BACKEND\\apitextil\\DTOs\\AtencionClienteDto.cs",
               "RelativeDocumentMoniker": "apitextil\\DTOs\\AtencionClienteDto.cs",
@@ -357,7 +355,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 29,
+              "DocumentIndex": 30,
               "Title": "TblAtencionCliente.cs",
               "DocumentMoniker": "C:\\Users\\USER\\Documents\\GIT-HUB-ACTUAL-\\PUSHER-BACKEND\\apitextil\\Models\\TblAtencionCliente.cs",
               "RelativeDocumentMoniker": "apitextil\\Models\\TblAtencionCliente.cs",
@@ -369,7 +367,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 30,
+              "DocumentIndex": 31,
               "Title": "ChatMessageDto.cs",
               "DocumentMoniker": "C:\\Users\\USER\\Documents\\GIT-HUB-ACTUAL-\\PUSHER-BACKEND\\apitextil\\DTOs\\ChatMessageDto.cs",
               "RelativeDocumentMoniker": "apitextil\\DTOs\\ChatMessageDto.cs",
@@ -381,7 +379,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 31,
+              "DocumentIndex": 32,
               "Title": "ChatController.cs",
               "DocumentMoniker": "C:\\Users\\USER\\Documents\\GIT-HUB-ACTUAL-\\PUSHER-BACKEND\\apitextil\\Controllers\\ChatController.cs",
               "RelativeDocumentMoniker": "apitextil\\Controllers\\ChatController.cs",
@@ -393,7 +391,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
+              "DocumentIndex": 9,
               "Title": "ComprobantesController.cs",
               "DocumentMoniker": "C:\\Users\\USER\\Documents\\GIT-HUB-ACTUAL-\\PUSHER-BACKEND\\apitextil\\Controllers\\ComprobantesController.cs",
               "RelativeDocumentMoniker": "apitextil\\Controllers\\ComprobantesController.cs",
@@ -405,7 +403,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 26,
+              "DocumentIndex": 27,
               "Title": "AtencionClienteService.cs",
               "DocumentMoniker": "C:\\Users\\USER\\Documents\\GIT-HUB-ACTUAL-\\PUSHER-BACKEND\\apitextil\\Services\\AtencionClienteService.cs",
               "RelativeDocumentMoniker": "apitextil\\Services\\AtencionClienteService.cs",
@@ -417,7 +415,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 25,
+              "DocumentIndex": 26,
               "Title": "TblMensajesChat.cs",
               "DocumentMoniker": "C:\\Users\\USER\\Documents\\GIT-HUB-ACTUAL-\\PUSHER-BACKEND\\apitextil\\Models\\TblMensajesChat.cs",
               "RelativeDocumentMoniker": "apitextil\\Models\\TblMensajesChat.cs",
@@ -429,7 +427,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 32,
+              "DocumentIndex": 33,
               "Title": "MensajeChatDto.cs",
               "DocumentMoniker": "C:\\Users\\USER\\Documents\\GIT-HUB-ACTUAL-\\PUSHER-BACKEND\\apitextil\\DTOs\\MensajeChatDto.cs",
               "RelativeDocumentMoniker": "apitextil\\DTOs\\MensajeChatDto.cs",
@@ -441,7 +439,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 33,
+              "DocumentIndex": 34,
               "Title": "iMensajeChatService.cs",
               "DocumentMoniker": "C:\\Users\\USER\\Documents\\GIT-HUB-ACTUAL-\\PUSHER-BACKEND\\apitextil\\Services\\iMensajeChatService.cs",
               "RelativeDocumentMoniker": "apitextil\\Services\\iMensajeChatService.cs",
@@ -453,7 +451,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 5,
               "Title": "MensajeChatService.cs",
               "DocumentMoniker": "C:\\Users\\USER\\Documents\\GIT-HUB-ACTUAL-\\PUSHER-BACKEND\\apitextil\\Services\\MensajeChatService.cs",
               "RelativeDocumentMoniker": "apitextil\\Services\\MensajeChatService.cs",
@@ -461,25 +459,24 @@
               "RelativeToolTip": "apitextil\\Services\\MensajeChatService.cs",
               "ViewState": "AgIAABgAAAAAAAAAAAAYwB8AAAA5AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-10-20T04:55:23.214Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-10-20T04:55:23.214Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 1,
               "Title": "EnviosController.cs",
               "DocumentMoniker": "C:\\Users\\USER\\Documents\\GIT-HUB-ACTUAL-\\PUSHER-BACKEND\\apitextil\\Controllers\\EnviosController.cs",
               "RelativeDocumentMoniker": "apitextil\\Controllers\\EnviosController.cs",
               "ToolTip": "C:\\Users\\USER\\Documents\\GIT-HUB-ACTUAL-\\PUSHER-BACKEND\\apitextil\\Controllers\\EnviosController.cs",
               "RelativeToolTip": "apitextil\\Controllers\\EnviosController.cs",
-              "ViewState": "AgIAALMAAAAAAAAAAAA0wLoAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAMMAAAAAAAAAAAAmwNEAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-08-26T05:02:01.023Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 7,
               "Title": "EnvioService.cs",
               "DocumentMoniker": "C:\\Users\\USER\\Documents\\GIT-HUB-ACTUAL-\\PUSHER-BACKEND\\apitextil\\Services\\EnvioService.cs",
               "RelativeDocumentMoniker": "apitextil\\Services\\EnvioService.cs",
@@ -487,12 +484,11 @@
               "RelativeToolTip": "apitextil\\Services\\EnvioService.cs",
               "ViewState": "AgIAACYAAAAAAAAAAAAgwAEAAAAVAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-08-26T04:59:21.522Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-08-26T04:59:21.522Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 34,
+              "DocumentIndex": 35,
               "Title": "IEnvioService.cs",
               "DocumentMoniker": "C:\\Users\\USER\\Documents\\GIT-HUB-ACTUAL-\\PUSHER-BACKEND\\apitextil\\Services\\IEnvioService.cs",
               "RelativeDocumentMoniker": "apitextil\\Services\\IEnvioService.cs",
@@ -504,7 +500,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 35,
+              "DocumentIndex": 36,
               "Title": "DocumentoEnvioDto.cs",
               "DocumentMoniker": "C:\\Users\\USER\\Documents\\GIT-HUB-ACTUAL-\\PUSHER-BACKEND\\apitextil\\DTOs\\DocumentoEnvioDto.cs",
               "RelativeDocumentMoniker": "apitextil\\DTOs\\DocumentoEnvioDto.cs",
@@ -516,7 +512,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 17,
+              "DocumentIndex": 18,
               "Title": "SeguimientoEnvioDto.cs",
               "DocumentMoniker": "C:\\Users\\USER\\Documents\\GIT-HUB-ACTUAL-\\PUSHER-BACKEND\\apitextil\\DTOs\\SeguimientoEnvioDto.cs",
               "RelativeDocumentMoniker": "apitextil\\DTOs\\SeguimientoEnvioDto.cs",
@@ -528,7 +524,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 36,
+              "DocumentIndex": 37,
               "Title": "DocumentoEnvio.cs",
               "DocumentMoniker": "C:\\Users\\USER\\Documents\\GIT-HUB-ACTUAL-\\PUSHER-BACKEND\\apitextil\\Models\\DocumentoEnvio.cs",
               "RelativeDocumentMoniker": "apitextil\\Models\\DocumentoEnvio.cs",
@@ -540,7 +536,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 37,
+              "DocumentIndex": 38,
               "Title": "SeguimientoEnvio.cs",
               "DocumentMoniker": "C:\\Users\\USER\\Documents\\GIT-HUB-ACTUAL-\\PUSHER-BACKEND\\apitextil\\Models\\SeguimientoEnvio.cs",
               "RelativeDocumentMoniker": "apitextil\\Models\\SeguimientoEnvio.cs",
@@ -552,7 +548,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 38,
+              "DocumentIndex": 39,
               "Title": "EstadoEnvio.cs",
               "DocumentMoniker": "C:\\Users\\USER\\Documents\\GIT-HUB-ACTUAL-\\PUSHER-BACKEND\\apitextil\\Models\\EstadoEnvio.cs",
               "RelativeDocumentMoniker": "apitextil\\Models\\EstadoEnvio.cs",
@@ -564,7 +560,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 18,
+              "DocumentIndex": 19,
               "Title": "EmitirComprobanteDto.cs",
               "DocumentMoniker": "C:\\Users\\USER\\Documents\\GIT-HUB-ACTUAL-\\PUSHER-BACKEND\\apitextil\\DTOs\\EmitirComprobanteDto.cs",
               "RelativeDocumentMoniker": "apitextil\\DTOs\\EmitirComprobanteDto.cs",
@@ -576,7 +572,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 19,
+              "DocumentIndex": 20,
               "Title": "ItemComprobanteDto.cs",
               "DocumentMoniker": "C:\\Users\\USER\\Documents\\GIT-HUB-ACTUAL-\\PUSHER-BACKEND\\apitextil\\DTOs\\ItemComprobanteDto.cs",
               "RelativeDocumentMoniker": "apitextil\\DTOs\\ItemComprobanteDto.cs",
@@ -588,7 +584,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 39,
+              "DocumentIndex": 40,
               "Title": "ComprobanteVenta.cs",
               "DocumentMoniker": "C:\\Users\\USER\\Documents\\GIT-HUB-ACTUAL-\\PUSHER-BACKEND\\apitextil\\Models\\ComprobanteVenta.cs",
               "RelativeDocumentMoniker": "apitextil\\Models\\ComprobanteVenta.cs",
@@ -600,7 +596,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 15,
+              "DocumentIndex": 16,
               "Title": "CreateVentaConDetallesDto.cs",
               "DocumentMoniker": "C:\\Users\\USER\\Documents\\GIT-HUB-ACTUAL-\\PUSHER-BACKEND\\apitextil\\DTOs\\Orders\\CreateVentaConDetallesDto.cs",
               "RelativeDocumentMoniker": "apitextil\\DTOs\\Orders\\CreateVentaConDetallesDto.cs",
@@ -612,7 +608,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 12,
+              "DocumentIndex": 13,
               "Title": "CreateVentaDto.cs",
               "DocumentMoniker": "C:\\Users\\USER\\Documents\\GIT-HUB-ACTUAL-\\PUSHER-BACKEND\\apitextil\\DTOs\\Orders\\CreateVentaDto.cs",
               "RelativeDocumentMoniker": "apitextil\\DTOs\\Orders\\CreateVentaDto.cs",
@@ -624,7 +620,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 11,
+              "DocumentIndex": 12,
               "Title": "VentaDto.cs",
               "DocumentMoniker": "C:\\Users\\USER\\Documents\\GIT-HUB-ACTUAL-\\PUSHER-BACKEND\\apitextil\\DTOs\\Orders\\VentaDto.cs",
               "RelativeDocumentMoniker": "apitextil\\DTOs\\Orders\\VentaDto.cs",
@@ -636,7 +632,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 8,
               "Title": "appsettings.json",
               "DocumentMoniker": "C:\\Users\\USER\\Documents\\GIT-HUB-ACTUAL-\\PUSHER-BACKEND\\apitextil\\appsettings.json",
               "RelativeDocumentMoniker": "apitextil\\appsettings.json",
@@ -644,12 +640,11 @@
               "RelativeToolTip": "apitextil\\appsettings.json",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAcAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2025-06-20T04:06:55.349Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-06-20T04:06:55.349Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 16,
+              "DocumentIndex": 17,
               "Title": "VentasController.cs",
               "DocumentMoniker": "C:\\Users\\USER\\Documents\\GIT-HUB-ACTUAL-\\PUSHER-BACKEND\\apitextil\\Controllers\\VentasController.cs",
               "RelativeDocumentMoniker": "apitextil\\Controllers\\VentasController.cs",
@@ -661,7 +656,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 40,
+              "DocumentIndex": 41,
               "Title": "AuthDto.cs",
               "DocumentMoniker": "C:\\Users\\USER\\Documents\\GIT-HUB-ACTUAL-\\PUSHER-BACKEND\\apitextil\\DTOs\\AuthDto.cs",
               "RelativeDocumentMoniker": "apitextil\\DTOs\\AuthDto.cs",
@@ -673,7 +668,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 13,
+              "DocumentIndex": 14,
               "Title": "CreateDetalleVentaDto.cs",
               "DocumentMoniker": "C:\\Users\\USER\\Documents\\GIT-HUB-ACTUAL-\\PUSHER-BACKEND\\apitextil\\DTOs\\Orders\\CreateDetalleVentaDto.cs",
               "RelativeDocumentMoniker": "apitextil\\DTOs\\Orders\\CreateDetalleVentaDto.cs",
@@ -685,7 +680,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 41,
+              "DocumentIndex": 42,
               "Title": "VentaService.cs",
               "DocumentMoniker": "C:\\Users\\USER\\Documents\\GIT-HUB-ACTUAL-\\PUSHER-BACKEND\\apitextil\\Services\\VentaService.cs",
               "RelativeDocumentMoniker": "apitextil\\Services\\VentaService.cs",
@@ -697,7 +692,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 42,
+              "DocumentIndex": 43,
               "Title": "TblEnviosService.cs",
               "DocumentMoniker": "C:\\Users\\USER\\Documents\\GIT-HUB-ACTUAL-\\PUSHER-BACKEND\\apitextil\\Services\\TblEnviosService.cs",
               "RelativeDocumentMoniker": "apitextil\\Services\\TblEnviosService.cs",
@@ -709,7 +704,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 43,
+              "DocumentIndex": 44,
               "Title": "CartItem.cs",
               "DocumentMoniker": "C:\\Users\\USER\\Documents\\GIT-HUB-ACTUAL-\\PUSHER-BACKEND\\apitextil\\Models\\CartItem.cs",
               "RelativeDocumentMoniker": "apitextil\\Models\\CartItem.cs",
@@ -721,7 +716,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 44,
+              "DocumentIndex": 45,
               "Title": "IVentaService.cs",
               "DocumentMoniker": "C:\\Users\\USER\\Documents\\GIT-HUB-ACTUAL-\\PUSHER-BACKEND\\apitextil\\Services\\IVentaService.cs",
               "RelativeDocumentMoniker": "apitextil\\Services\\IVentaService.cs",
@@ -733,7 +728,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 45,
+              "DocumentIndex": 46,
               "Title": "ITblEnviosService.cs",
               "DocumentMoniker": "C:\\Users\\USER\\Documents\\GIT-HUB-ACTUAL-\\PUSHER-BACKEND\\apitextil\\Services\\ITblEnviosService.cs",
               "RelativeDocumentMoniker": "apitextil\\Services\\ITblEnviosService.cs",
@@ -745,7 +740,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 9,
+              "DocumentIndex": 10,
               "Title": "Venta.cs",
               "DocumentMoniker": "C:\\Users\\USER\\Documents\\GIT-HUB-ACTUAL-\\PUSHER-BACKEND\\apitextil\\Models\\Venta.cs",
               "RelativeDocumentMoniker": "apitextil\\Models\\Venta.cs",
@@ -757,20 +752,20 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 0,
               "Title": "Program.cs",
               "DocumentMoniker": "C:\\Users\\USER\\Documents\\GIT-HUB-ACTUAL-\\PUSHER-BACKEND\\apitextil\\Program.cs",
               "RelativeDocumentMoniker": "apitextil\\Program.cs",
               "ToolTip": "C:\\Users\\USER\\Documents\\GIT-HUB-ACTUAL-\\PUSHER-BACKEND\\apitextil\\Program.cs",
               "RelativeToolTip": "apitextil\\Program.cs",
-              "ViewState": "AgIAADMAAAAAAAAAAAAAAEUAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAEgAAAAAAAAAAAAWwF4AAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-06-20T04:15:58.836Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 46,
+              "DocumentIndex": 47,
               "Title": "DetalleVenta.cs",
               "DocumentMoniker": "C:\\Users\\USER\\Documents\\GIT-HUB-ACTUAL-\\PUSHER-BACKEND\\apitextil\\Models\\DetalleVenta.cs",
               "RelativeDocumentMoniker": "apitextil\\Models\\DetalleVenta.cs",
@@ -782,7 +777,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 6,
               "Title": "EcommerceContext.cs",
               "DocumentMoniker": "C:\\Users\\USER\\Documents\\GIT-HUB-ACTUAL-\\PUSHER-BACKEND\\apitextil\\Data\\EcommerceContext.cs",
               "RelativeDocumentMoniker": "apitextil\\Data\\EcommerceContext.cs",
@@ -790,12 +785,11 @@
               "RelativeToolTip": "apitextil\\Data\\EcommerceContext.cs",
               "ViewState": "AgIAAJsBAAAAAAAAAAAQwKgBAAAbAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-20T04:55:39.262Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-06-20T04:55:39.262Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 14,
+              "DocumentIndex": 15,
               "Title": "CreatePreferenceRequestDto.cs",
               "DocumentMoniker": "C:\\Users\\USER\\Documents\\GIT-HUB-ACTUAL-\\PUSHER-BACKEND\\apitextil\\DTOs\\Orders\\CreatePreferenceRequestDto.cs",
               "RelativeDocumentMoniker": "apitextil\\DTOs\\Orders\\CreatePreferenceRequestDto.cs",
@@ -807,7 +801,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 47,
+              "DocumentIndex": 2,
               "Title": "DatabaseConnectionTester.cs",
               "DocumentMoniker": "C:\\Users\\USER\\Documents\\GIT-HUB-ACTUAL-\\PUSHER-BACKEND\\apitextil\\DatabaseConnectionTester.cs",
               "RelativeDocumentMoniker": "apitextil\\DatabaseConnectionTester.cs",
@@ -815,7 +809,8 @@
               "RelativeToolTip": "apitextil\\DatabaseConnectionTester.cs",
               "ViewState": "AgIAACEAAAAAAAAAAAAYwAkAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-21T00:05:14.661Z"
+              "WhenOpened": "2025-06-21T00:05:14.661Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
@@ -831,7 +826,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 23,
+              "DocumentIndex": 24,
               "Title": "apitextil.http",
               "DocumentMoniker": "C:\\Users\\USER\\Documents\\GIT-HUB-ACTUAL-\\PUSHER-BACKEND\\apitextil\\apitextil.http",
               "RelativeDocumentMoniker": "apitextil\\apitextil.http",
@@ -843,7 +838,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 10,
+              "DocumentIndex": 11,
               "Title": "TblEnviosDto.cs",
               "DocumentMoniker": "C:\\Users\\USER\\Documents\\GIT-HUB-ACTUAL-\\PUSHER-BACKEND\\apitextil\\DTOs\\TblEnviosDto.cs",
               "RelativeDocumentMoniker": "apitextil\\DTOs\\TblEnviosDto.cs",
@@ -891,7 +886,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 20,
+              "DocumentIndex": 21,
               "Title": "TblEnviosController.cs",
               "DocumentMoniker": "C:\\Users\\USER\\Documents\\GIT-HUB-ACTUAL-\\PUSHER-BACKEND\\apitextil\\Controllers\\TblEnviosController.cs",
               "RelativeDocumentMoniker": "apitextil\\Controllers\\TblEnviosController.cs",
@@ -939,7 +934,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 21,
+              "DocumentIndex": 22,
               "Title": "CartController.cs",
               "DocumentMoniker": "C:\\Users\\USER\\Documents\\GIT-HUB-ACTUAL-\\PUSHER-BACKEND\\apitextil\\Controllers\\CartController.cs",
               "RelativeDocumentMoniker": "apitextil\\Controllers\\CartController.cs",

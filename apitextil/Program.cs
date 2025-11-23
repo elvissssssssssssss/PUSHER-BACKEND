@@ -88,9 +88,11 @@ builder.Services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme)
             ValidAudience = builder.Configuration["JwtSettings:Audience"],
             IssuerSigningKey = new SymmetricSecurityKey(
                 Encoding.UTF8.GetBytes(builder.Configuration["JwtSettings:SecretKey"] ??
-                "TuSupercalifragilisticoSecretoDeAlMenos32Caracteres"))
+                "TuSupercalifragilisticoSecretoDeAlMenos32Caracteres")),
+            ClockSkew = TimeSpan.Zero // ?? AGREGAR ESTA LÍNEA
         };
     });
+
 // Configurar JSON options
 builder.Services.ConfigureHttpJsonOptions(options =>
 {

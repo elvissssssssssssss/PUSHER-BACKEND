@@ -177,17 +177,30 @@ namespace apitextil.Controllers
 
         // ⬇️ NUEVO: Endpoint para autenticación de Pusher (necesario para canales privados)
         [HttpPost("pusher/auth")]
+        [AllowAnonymous] // ⬅️ PERMITE ACCESO SIN TOKEN
         public IActionResult AuthPusher([FromBody] PusherAuthRequest request)
         {
-            var userIdClaim = User.FindFirst("id")?.Value;
-            if (string.IsNullOrEmpty(userIdClaim))
-                return Unauthorized();
+            Console.WriteLine("🔐 =================================");
+            Console.WriteLine($"🔐 AuthPusher llamado (sin autenticación)");
+            Console.WriteLine($"📡 Channel: {request?.channel_name ?? "NULL"}");
+            Console.WriteLine($"🆔 Socket ID: {request?.socket_id ?? "NULL"}");
 
-            var userId = int.Parse(userIdClaim);
+            // Extraer userId del nombre del canal
+            // Formato esperado: "private-user-28"
+            var channelParts = request.channel_name.Split('-');
+            if (channelParts.Length != 3 || channelParts[0] != "private" || channelParts[1] != "user")
+            {
+                Console.WriteLine("❌ Formato de canal inválido");
+                return BadRequest(new { error = "Formato de canal inválido" });
+            }
 
-            // Verificar que el usuario solo pueda suscribirse a su propio canal
-            if (request.channel_name != $"private-user-{userId}")
-                return Forbid();
+            if (!int.TryParse(channelParts[2], out int userId))
+            {
+                Console.WriteLine("❌ User ID inválido en el canal");
+                return BadRequest(new { error = "User ID inválido" });
+            }
+
+            Console.WriteLine($"✅ User ID extraído del canal: {userId}");
 
             var pusherOptions = new PusherOptions
             {
@@ -203,9 +216,13 @@ namespace apitextil.Controllers
             );
 
             var auth = pusher.Authenticate(request.channel_name, request.socket_id);
+            Console.WriteLine($"✅ Autenticación Pusher exitosa para usuario {userId}");
+            Console.WriteLine("🔐 =================================");
 
             return Ok(auth.ToJson());
         }
+
+
     }
 
     // ⬇️ NUEVO: Clase para la solicitud de autenticación
