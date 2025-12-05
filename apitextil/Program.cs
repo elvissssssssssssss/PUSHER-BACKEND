@@ -68,6 +68,9 @@ builder.Services.AddScoped<iRoleService, RoleService>();
 builder.Services.AddScoped<AdminManagementService>();
 // Busca donde están tus otros servicios y agrega:
 builder.Services.AddScoped<IEnvioNotificacionService, EnvioNotificacionService>();
+// Agregar después de las otras inyecciones de servicios
+builder.Services.AddScoped<IEmailService, EmailService>();
+
 
 
 // Para permitir archivos grandes (opcional)

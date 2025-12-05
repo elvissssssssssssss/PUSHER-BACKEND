@@ -27,6 +27,7 @@ wwwroot\uploads\envios\828300d0-e7cb-4d7f-8162-577662def5fe_casacaM11 - copia.jp
 wwwroot\uploads\envios\a2dd28f7-55bd-427d-84c0-81c1b9c2c18e_casacah.jpeg
 wwwroot\uploads\envios\b85bdfe4-cb79-4690-a837-d787bd578d81_casacaM10 - copia.jpg
 wwwroot\uploads\envios\c130a102-593a-4a56-bc9d-95266117c8d0_ovlxfigvszc61.jpg
+wwwroot\uploads\logo.png
 wwwroot\uploads\ovlxfigvszc61.jpg
 wwwroot\uploads\perfecta.jpg
 wwwroot\uploads\productos\casacaM8 - copia.jpg

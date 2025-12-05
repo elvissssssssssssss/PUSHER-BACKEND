@@ -1503,5 +1503,21 @@
       }
     ],
     "ReturnTypes": []
+  },
+  {
+    "ContainingType": "apitextil.Controllers.VentasController",
+    "Method": "TestEmail",
+    "RelativePath": "api/Ventas/test-email",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "dto",
+        "Type": "apitextil.Controllers.VentasController\u002BTestEmailDto",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
   }
 ]

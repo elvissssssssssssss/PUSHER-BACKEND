@@ -10,6 +10,7 @@ namespace apitextil.DTOs.Orders
         public int Id { get; set; }
         public int UserId { get; set; }
         public string UsuarioEmail { get; set; } = string.Empty;
+        public string UsuarioNombre { get; set; } = string.Empty;
         public int MetodoPagoId { get; set; }
         public string MetodoPagoNombre { get; set; } = string.Empty;
         public decimal Total { get; set; }

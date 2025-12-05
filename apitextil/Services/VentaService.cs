@@ -10,6 +10,7 @@ using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
 using System.Linq;
+
 using System.Threading.Tasks;
 
 
@@ -74,6 +75,11 @@ namespace apitextil.Services
             }
             await _context.SaveChangesAsync();
 
+            // ✨ Cargar usuario para obtener email y nombre
+            var ventaConUsuario = await _context.Ventas
+                .Include(v => v.User)
+                .FirstOrDefaultAsync(v => v.Id == venta.Id);
+
             // Configurar MercadoPago
             MercadoPagoConfig.AccessToken = _configuration["MercadoPago:AccessToken"];
 
@@ -97,15 +103,20 @@ namespace apitextil.Services
             var client = new PreferenceClient();
             Preference preference = await client.CreateAsync(request);
 
-            // Retornar DTO con InitPoint
+            // Retornar DTO con InitPoint y datos del usuario
             return new VentaDto
             {
                 Id = venta.Id,
                 UserId = venta.UserId,
+                // ✨ Llenar email y nombre del usuario
+                UsuarioEmail = ventaConUsuario?.User?.email ?? string.Empty,
+                UsuarioNombre = ventaConUsuario?.User != null
+                    ? $"{ventaConUsuario.User.nombre} {ventaConUsuario.User.apellido}"
+                    : string.Empty,
                 MetodoPagoId = venta.MetodoPagoId,
                 Total = venta.Total,
                 FechaVenta = venta.FechaVenta,
-                InitPoint = preference.InitPoint, // ✅ URL de pago
+                InitPoint = preference.InitPoint,
                 Detalles = dto.Detalles.Select(d => new DetalleVentaDto
                 {
                     ProductoId = d.ProductoId,

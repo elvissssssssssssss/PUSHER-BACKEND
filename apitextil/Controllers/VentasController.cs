@@ -4,6 +4,7 @@ using System.Threading.Tasks;
 using apitextil.Services;
 using apitextil.DTOs.Orders;
 using MercadoPago.Client.Preference;
+using apitextil.Services;
 using MercadoPago.Config;
 using MercadoPago.Resource.Preference;
 
@@ -16,12 +17,15 @@ namespace apitextil.Controllers
     {
         // Servicio que maneja la lógica de negocio para ventas
         private readonly IVentaService _ventaService;
+        private readonly IEmailService _emailService; // Agregar
 
         // Inyección de dependencias del servicio de ventas
-        public VentasController(IVentaService ventaService)
+        public VentasController(IVentaService ventaService, IEmailService emailService)
         {
             _ventaService = ventaService;
+            _emailService = emailService;
         }
+
 
         // POST: /api/Ventas
         // Crea una venta simple sin detalles adicionales
@@ -35,12 +39,41 @@ namespace apitextil.Controllers
 
         // POST: /api/Ventas/completa
         // Crea una venta junto con sus detalles (productos, cantidades, etc.)
+        // POST: /api/Ventas/completa
         [HttpPost("completa")]
         public async Task<IActionResult> CrearVentaConDetalles([FromBody] CreateVentaConDetallesDto dto)
         {
-            var venta = await _ventaService.CrearVentaConDetallesAsync(dto);
-            // Devuelve 201 Created con la información de la venta completa creada
-            return CreatedAtAction(nameof(CrearVentaConDetalles), new { id = venta.Id }, venta);
+            try
+            {
+                // Crear venta y obtener DTO con datos del usuario
+                var ventaDto = await _ventaService.CrearVentaConDetallesAsync(dto);
+
+                // ✨ Enviar email usando los campos del DTO
+                if (!string.IsNullOrEmpty(ventaDto.UsuarioEmail) &&
+                    !string.IsNullOrEmpty(ventaDto.UsuarioNombre))
+                {
+                    try
+                    {
+                        await _emailService.EnviarEmailVentaExitosaAsync(
+                            ventaDto.UsuarioEmail,      // Email de tblusuarios
+                            ventaDto.UsuarioNombre,     // Nombre completo
+                            ventaDto.Total,             // Total de la venta
+                            ventaDto.Id.ToString()      // ID de la venta
+                        );
+                    }
+                    catch (Exception emailEx)
+                    {
+                        // Log del error pero no falla la venta
+                        Console.WriteLine($"Error al enviar email: {emailEx.Message}");
+                    }
+                }
+
+                return CreatedAtAction(nameof(CrearVentaConDetalles), new { id = ventaDto.Id }, ventaDto);
+            }
+            catch (Exception ex)
+            {
+                return BadRequest(new { error = ex.Message });
+            }
         }
 
         // GET: /api/Ventas
@@ -52,7 +85,31 @@ namespace apitextil.Controllers
             return Ok(ventas); // Devuelve 200 OK con la lista de ventas
         }
 
-        // POST: /api/Ventas/preferencia
+        [HttpPost("test-email")]
+        public async Task<IActionResult> TestEmail([FromBody] TestEmailDto dto)
+        {
+            try
+            {
+                await _emailService.EnviarEmailVentaExitosaAsync(
+                    dto.Email,
+                    "Cliente de Prueba",
+                    100.50m,
+                    "TEST-001"
+                );
+                return Ok(new { message = "Email enviado correctamente" });
+            }
+            catch (Exception ex)
+            {
+                return BadRequest(new { error = ex.Message });
+            }
+        }
+
+        // DTO para pruebas
+        public class TestEmailDto
+        {
+            public string Email { get; set; }
+        }
+
         // Crea una preferencia de pago en Mercado Pago para iniciar el proceso de pago
         [HttpPost("preferencia")]
         public async Task<IActionResult> CrearPreferenciaPago([FromBody] CreatePreferenceRequestDto dto)
