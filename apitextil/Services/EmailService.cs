@@ -1,121 +1,124 @@
-﻿using MailKit.Net.Smtp;
-using MailKit.Security;
-using MimeKit;
+﻿// Services/EmailService.cs
+using Microsoft.Extensions.Configuration;
+using Microsoft.Extensions.Logging;
+using System.Net.Http;
+using System.Net.Http.Headers;
+using System.Text;
+using System.Text.Json;
 
 namespace apitextil.Services
 {
+    public interface IEmailService
+    {
+        Task EnviarEmailVentaExitosaAsync(string emailDestino, string nombreCliente,
+            decimal montoTotal, string numeroVenta);
+    }
+
     public class EmailService : IEmailService
     {
         private readonly IConfiguration _configuration;
         private readonly ILogger<EmailService> _logger;
-        private readonly IWebHostEnvironment _environment;
+        private readonly IHttpClientFactory _httpClientFactory;
 
-        public EmailService(IConfiguration configuration, ILogger<EmailService> logger, IWebHostEnvironment environment)
+        public EmailService(
+            IConfiguration configuration,
+            ILogger<EmailService> logger,
+            IHttpClientFactory httpClientFactory)
         {
             _configuration = configuration;
             _logger = logger;
-            _environment = environment;
+            _httpClientFactory = httpClientFactory;
         }
 
-        public async Task EnviarEmailVentaExitosaAsync(string emailDestino, string nombreCliente,
-            decimal montoTotal, string numeroVenta)
+        public async Task EnviarEmailVentaExitosaAsync(
+            string emailDestino,
+            string nombreCliente,
+            decimal montoTotal,
+            string numeroVenta)
         {
             try
             {
-                // ✨ Convertir logo a Base64 para mayor confiabilidad
-                string logoBase64 = "";
-                try
+                Console.WriteLine($"📧 [RESEND] Enviando a: {emailDestino}");
+
+                var apiKey = _configuration["RESEND_API_KEY"];
+
+                if (string.IsNullOrEmpty(apiKey))
                 {
-                    var logoPath = Path.Combine(_environment.WebRootPath, "uploads", "logo.png");
-                    if (File.Exists(logoPath))
-                    {
-                        var logoBytes = await File.ReadAllBytesAsync(logoPath);
-                        logoBase64 = Convert.ToBase64String(logoBytes);
-                    }
-                }
-                catch (Exception logoEx)
-                {
-                    _logger.LogWarning($"No se pudo cargar el logo: {logoEx.Message}");
+                    throw new Exception("RESEND_API_KEY no configurada");
                 }
 
-                var message = new MimeMessage();
-                message.From.Add(new MailboxAddress(
-                    _configuration["Smtp:FromName"],
-                    _configuration["Smtp:FromEmail"]
-                ));
-                message.To.Add(new MailboxAddress(nombreCliente, emailDestino));
-                message.Subject = $"✅ Pago Exitoso - Pedido #{numeroVenta}";
+                Console.WriteLine($"🔑 API Key configurada");
 
-                // ✨ Usar logo Base64 si está disponible, sino usar URL de fallback
-                string logoSrc = !string.IsNullOrEmpty(logoBase64)
-                    ? $"data:image/png;base64,{logoBase64}"
-                    : "https://pusher-backend-elvis.onrender.com/uploads/logo.png";
+                var client = _httpClientFactory.CreateClient();
+                client.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue("Bearer", apiKey);
 
-                var bodyBuilder = new BodyBuilder
+                var emailData = new
                 {
-                    HtmlBody = $@"
+                    from = "NTX-SAC <onboarding@resend.dev>",
+                    to = new[] { emailDestino },
+                    subject = $"✅ Pago Exitoso - Pedido #{numeroVenta}",
+                    html = $@"
 <!DOCTYPE html>
-<html>
+<html lang='es'>
 <head>
     <meta charset='UTF-8'>
     <meta name='viewport' content='width=device-width, initial-scale=1.0'>
+    <title>Confirmación de Pedido</title>
 </head>
-<body style='margin: 0; padding: 0; background-color: #f4f4f4; font-family: Arial, sans-serif;'>
-    <table width='100%' cellpadding='0' cellspacing='0' border='0' style='background-color: #f4f4f4; padding: 20px 0;'>
+<body style='margin: 0; padding: 0; background-color: #f4f4f4; font-family: -apple-system, BlinkMacSystemFont, ""Segoe UI"", Roboto, Arial, sans-serif;'>
+    <table width='100%' cellpadding='0' cellspacing='0' border='0' style='background-color: #f4f4f4; padding: 40px 20px;'>
         <tr>
             <td align='center'>
-                <table width='600' cellpadding='0' cellspacing='0' border='0' style='background-color: #ffffff; border-radius: 8px; box-shadow: 0 2px 8px rgba(0,0,0,0.1);'>
+                <table width='600' cellpadding='0' cellspacing='0' border='0' style='background-color: #ffffff; border-radius: 12px; box-shadow: 0 4px 12px rgba(0,0,0,0.08); overflow: hidden;'>
                     
-                    <!-- Logo y Header -->
+                    <!-- Header con gradiente -->
                     <tr>
-                        <td style='background: linear-gradient(135deg, #dc2626 0%, #b91c1c 100%); padding: 30px; text-align: center; border-radius: 8px 8px 0 0;'>
-                            <img src='https://pusher-backend-elvis.onrender.com/logo.png'
- alt='NTX Logo' style='height: 60px; margin-bottom: 15px;' />
-                            <h1 style='color: #ffffff; margin: 0; font-size: 28px; font-weight: bold;'>
+                        <td style='background: linear-gradient(135deg, #dc2626 0%, #b91c1c 100%); padding: 40px 30px; text-align: center;'>
+                            <h1 style='color: #ffffff; margin: 0 0 10px 0; font-size: 32px; font-weight: 700; letter-spacing: -0.5px;'>
                                 ✓ ¡Pago Exitoso!
                             </h1>
-                            <p style='color: #fee; margin: 10px 0 0 0; font-size: 14px;'>
-                                Tu pedido ha sido confirmado
+                            <p style='color: rgba(255,255,255,0.95); margin: 0; font-size: 16px;'>
+                                Tu pedido #{numeroVenta} ha sido confirmado
                             </p>
                         </td>
                     </tr>
 
-                    <!-- Contenido Principal -->
+                    <!-- Contenido principal -->
                     <tr>
                         <td style='padding: 40px 30px;'>
-                            <h2 style='color: #1f2937; margin: 0 0 20px 0; font-size: 22px;'>
+                            <h2 style='color: #1f2937; margin: 0 0 20px 0; font-size: 24px; font-weight: 600;'>
                                 Hola {nombreCliente},
                             </h2>
-                            <p style='color: #4b5563; line-height: 1.6; margin: 0 0 25px 0; font-size: 16px;'>
-                                ¡Gracias por tu compra! Tu pago ha sido procesado exitosamente y tu pedido está siendo preparado.
+                            <p style='color: #4b5563; line-height: 1.7; margin: 0 0 30px 0; font-size: 16px;'>
+                                ¡Gracias por tu compra en <strong style='color: #dc2626;'>NTX-SAC</strong>! Tu pago ha sido procesado exitosamente y tu pedido está siendo preparado para envío.
                             </p>
 
-                            <!-- Información del Pedido -->
-                            <table width='100%' cellpadding='0' cellspacing='0' border='0' style='background-color: #f9fafb; border-radius: 6px; border: 1px solid #e5e7eb; margin-bottom: 25px;'>
+                            <!-- Card de información del pedido -->
+                            <table width='100%' cellpadding='0' cellspacing='0' border='0' style='background: linear-gradient(to bottom right, #fef2f2, #fef3f2); border-radius: 10px; border: 1px solid #fee2e2; margin-bottom: 30px; overflow: hidden;'>
                                 <tr>
-                                    <td style='padding: 20px;'>
-                                        <table width='100%' cellpadding='8' cellspacing='0' border='0'>
+                                    <td style='padding: 25px;'>
+                                        <table width='100%' cellpadding='12' cellspacing='0' border='0'>
                                             <tr>
-                                                <td style='color: #6b7280; font-size: 14px; border-bottom: 1px solid #e5e7eb;'>
-                                                    <strong>Número de Pedido:</strong>
+                                                <td style='color: #6b7280; font-size: 15px; padding: 8px 0; border-bottom: 1px solid #fee2e2;'>
+                                                    <strong>📦 Número de Pedido</strong>
                                                 </td>
-                                                <td style='color: #1f2937; font-size: 16px; font-weight: bold; text-align: right; border-bottom: 1px solid #e5e7eb;'>
+                                                <td style='color: #1f2937; font-size: 16px; font-weight: 600; text-align: right; padding: 8px 0; border-bottom: 1px solid #fee2e2;'>
                                                     #{numeroVenta}
                                                 </td>
                                             </tr>
                                             <tr>
-                                                <td style='color: #6b7280; font-size: 14px; border-bottom: 1px solid #e5e7eb; padding-top: 12px;'>
-                                                    <strong>Fecha:</strong>
+                                                <td style='color: #6b7280; font-size: 15px; padding: 8px 0; border-bottom: 1px solid #fee2e2;'>
+                                                    <strong>📅 Fecha de Compra</strong>
                                                 </td>
-                                                <td style='color: #1f2937; font-size: 14px; text-align: right; border-bottom: 1px solid #e5e7eb; padding-top: 12px;'>
+                                                <td style='color: #1f2937; font-size: 15px; text-align: right; padding: 8px 0; border-bottom: 1px solid #fee2e2;'>
                                                     {DateTime.Now:dd/MM/yyyy HH:mm}
                                                 </td>
                                             </tr>
                                             <tr>
-                                                <td style='color: #6b7280; font-size: 14px; padding-top: 12px;'>
-                                                    <strong>Monto Total:</strong>
+                                                <td style='color: #6b7280; font-size: 15px; padding: 12px 0 0 0;'>
+                                                    <strong>💰 Monto Total</strong>
                                                 </td>
-                                                <td style='color: #dc2626; font-size: 22px; font-weight: bold; text-align: right; padding-top: 12px;'>
+                                                <td style='color: #dc2626; font-size: 28px; font-weight: 700; text-align: right; padding: 12px 0 0 0;'>
                                                     S/ {montoTotal:F2}
                                                 </td>
                                             </tr>
@@ -124,67 +127,74 @@ namespace apitextil.Services
                                 </tr>
                             </table>
 
-                            <!-- Mensaje adicional con icono -->
-                         
-                            <p style='color: #4b5563; line-height: 1.6; margin: 0; font-size: 15px;'>
-                                Si tienes alguna pregunta, no dudes en contactarnos.
-                            </p>
-                            <p style='color: #4b5563; line-height: 1.6; margin: 15px 0 0 0; font-size: 15px;'>
-                                Gracias por confiar en <strong style='color: #dc2626;'>NTX-SAC</strong>.
+                            <!-- Sección de qué sigue -->
+                            <div style='background: #f9fafb; border-left: 4px solid #dc2626; padding: 20px; border-radius: 6px; margin-bottom: 25px;'>
+                                <h3 style='color: #1f2937; margin: 0 0 10px 0; font-size: 18px;'>¿Qué sigue?</h3>
+                                <ul style='color: #4b5563; margin: 0; padding-left: 20px; line-height: 1.8;'>
+                                    <li>Recibirás un correo cuando tu pedido sea enviado</li>
+                                    <li>El tiempo de entrega estimado es de 3-5 días hábiles</li>
+                                    <li>Puedes rastrear tu pedido en nuestra web</li>
+                                </ul>
+                            </div>
+
+                            <p style='color: #4b5563; line-height: 1.7; margin: 0; font-size: 15px;'>
+                                Si tienes alguna pregunta, no dudes en contactarnos. Estamos aquí para ayudarte.
                             </p>
                         </td>
                     </tr>
 
                     <!-- Footer -->
                     <tr>
-                        <td style='background-color: #f9fafb; padding: 25px 30px; border-top: 1px solid #e5e7eb; border-radius: 0 0 8px 8px;'>
-                            <table width='100%' cellpadding='0' cellspacing='0' border='0'>
-                                <tr>
-                                    <td align='center'>
-                                        <p style='color: #9ca3af; font-size: 12px; margin: 0 0 10px 0;'>
-                                            Este es un correo automático, por favor no respondas a este mensaje.
-                                        </p>
-                                        <p style='color: #6b7280; font-size: 13px; margin: 0;'>
-                                            © 2025 <strong style='color: #dc2626;'>NTX-SAC</strong> - Tienda Textil Premium
-                                        </p>
-                                    </td>
-                                </tr>
-                            </table>
+                        <td style='background: linear-gradient(to right, #1f2937, #111827); padding: 30px; text-align: center; border-top: 1px solid #e5e7eb;'>
+                            <p style='color: #ffffff; font-size: 18px; font-weight: 600; margin: 0 0 15px 0;'>
+                                <span style='color: #dc2626;'>NTX-SAC</span> Tienda Textil
+                            </p>
+                            <p style='color: #9ca3af; font-size: 13px; margin: 0 0 10px 0;'>
+                                Este es un correo automático, por favor no respondas directamente.
+                            </p>
+                            <p style='color: #6b7280; font-size: 12px; margin: 0;'>
+                                © 2025 NTX-SAC. Todos los derechos reservados.
+                            </p>
                         </td>
                     </tr>
 
                 </table>
+                
+                <!-- Texto adicional para evitar spam -->
+                <p style='color: #9ca3af; font-size: 11px; text-align: center; margin: 20px 0 0 0; max-width: 500px;'>
+                    Este correo fue enviado a {emailDestino} porque realizaste una compra en nuestra tienda.
+                </p>
             </td>
         </tr>
     </table>
 </body>
 </html>"
+
                 };
 
-                message.Body = bodyBuilder.ToMessageBody();
+                var json = JsonSerializer.Serialize(emailData);
+                var content = new StringContent(json, Encoding.UTF8, "application/json");
 
-                using (var client = new SmtpClient())
+                Console.WriteLine($"📨 Enviando email a Resend API...");
+
+                var response = await client.PostAsync("https://api.resend.com/emails", content);
+                var responseBody = await response.Content.ReadAsStringAsync();
+
+                if (response.IsSuccessStatusCode)
                 {
-                    await client.ConnectAsync(
-                        _configuration["Smtp:Host"],
-                        int.Parse(_configuration["Smtp:Port"]),
-                        SecureSocketOptions.StartTls
-                    );
-
-                    await client.AuthenticateAsync(
-                        _configuration["Smtp:User"],
-                        _configuration["Smtp:Password"]
-                    );
-
-                    await client.SendAsync(message);
-                    await client.DisconnectAsync(true);
+                    Console.WriteLine($"✅✅✅ EMAIL ENVIADO EXITOSAMENTE!");
+                    _logger.LogInformation($"Email enviado a {emailDestino}");
                 }
-
-                _logger.LogInformation($"Email enviado exitosamente a {emailDestino}");
+                else
+                {
+                    Console.WriteLine($"❌ Error de Resend API: {responseBody}");
+                    throw new Exception($"Error al enviar email: {responseBody}");
+                }
             }
             catch (Exception ex)
             {
-                _logger.LogError($"Error al enviar email: {ex.Message}");
+                _logger.LogError($"Error: {ex.Message}");
+                Console.WriteLine($"❌ Error completo: {ex.Message}");
                 throw;
             }
         }
