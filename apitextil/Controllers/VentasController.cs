@@ -45,8 +45,16 @@ namespace apitextil.Controllers
         {
             try
             {
+                Console.WriteLine("🛒 === INICIO CrearVentaConDetalles ===");
+                Console.WriteLine($"UserId: {dto.UserId}, Total: {dto.Total}");
+
                 // Crear venta y obtener DTO con datos del usuario
                 var ventaDto = await _ventaService.CrearVentaConDetallesAsync(dto);
+
+                Console.WriteLine($"✅ Venta creada - ID: {ventaDto.Id}");
+                Console.WriteLine($"📧 Email: {ventaDto.UsuarioEmail}");
+                Console.WriteLine($"👤 Nombre: {ventaDto.UsuarioNombre}");
+                Console.WriteLine($"💰 Total: {ventaDto.Total}");
 
                 // ✨ Enviar email usando los campos del DTO
                 if (!string.IsNullOrEmpty(ventaDto.UsuarioEmail) &&
@@ -54,24 +62,36 @@ namespace apitextil.Controllers
                 {
                     try
                     {
+                        Console.WriteLine($"📨 INTENTANDO enviar email a: {ventaDto.UsuarioEmail}");
+
                         await _emailService.EnviarEmailVentaExitosaAsync(
                             ventaDto.UsuarioEmail,      // Email de tblusuarios
                             ventaDto.UsuarioNombre,     // Nombre completo
                             ventaDto.Total,             // Total de la venta
                             ventaDto.Id.ToString()      // ID de la venta
                         );
+
+                        Console.WriteLine($"✅✅✅ EMAIL ENVIADO EXITOSAMENTE a: {ventaDto.UsuarioEmail}");
                     }
                     catch (Exception emailEx)
                     {
                         // Log del error pero no falla la venta
-                        Console.WriteLine($"Error al enviar email: {emailEx.Message}");
+                        Console.WriteLine($"❌❌❌ ERROR al enviar email: {emailEx.Message}");
+                        Console.WriteLine($"Stack trace: {emailEx.StackTrace}");
+                        Console.WriteLine($"Inner exception: {emailEx.InnerException?.Message}");
                     }
                 }
+                else
+                {
+                    Console.WriteLine("⚠️ NO se enviará email - Email o Nombre vacío");
+                }
 
+                Console.WriteLine("🛒 === FIN CrearVentaConDetalles ===");
                 return CreatedAtAction(nameof(CrearVentaConDetalles), new { id = ventaDto.Id }, ventaDto);
             }
             catch (Exception ex)
             {
+                Console.WriteLine($"❌ ERROR GENERAL en CrearVentaConDetalles: {ex.Message}");
                 return BadRequest(new { error = ex.Message });
             }
         }
