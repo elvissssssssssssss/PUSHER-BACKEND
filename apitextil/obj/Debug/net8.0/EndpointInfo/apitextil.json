@@ -2505,6 +2505,37 @@
         }
       }
     },
+    "/api/Ventas/notificar-comprobante": {
+      "post": {
+        "tags": [
+          "Ventas"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/NotificarComprobanteDto"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/NotificarComprobanteDto"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/NotificarComprobanteDto"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
     "/api/Ventas/preferencia": {
       "post": {
         "tags": [
@@ -3207,6 +3238,16 @@
           },
           "dataMap": {
             "$ref": "#/components/schemas/NiubizDataMap"
+          }
+        },
+        "additionalProperties": false
+      },
+      "NotificarComprobanteDto": {
+        "type": "object",
+        "properties": {
+          "ventaId": {
+            "type": "integer",
+            "format": "int32"
           }
         },
         "additionalProperties": false

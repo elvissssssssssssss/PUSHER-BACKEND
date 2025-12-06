@@ -1,29 +1,35 @@
 ﻿// Controllers/VentasController.cs
-using Microsoft.AspNetCore.Mvc;
-using System.Threading.Tasks;
-using apitextil.Services;
+using apitextil.Data;
 using apitextil.DTOs.Orders;
-using MercadoPago.Client.Preference;
 using apitextil.Services;
+using apitextil.Services;
+using MercadoPago.Client.Preference;
 using MercadoPago.Config;
 using MercadoPago.Resource.Preference;
+using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
+using System.Threading.Tasks;
 
 
 namespace apitextil.Controllers
 {
-    [ApiController] // Indica que este controlador manejará peticiones HTTP de tipo API
-    [Route("api/[controller]")] // La ruta base será "api/Ventas"
+    [ApiController]
+    [Route("api/[controller]")]
     public class VentasController : ControllerBase
     {
-        // Servicio que maneja la lógica de negocio para ventas
         private readonly IVentaService _ventaService;
-        private readonly IEmailService _emailService; // Agregar
+        private readonly IEmailService _emailService;
+        private readonly EcommerceContext _context; // ✅ Solo esta línea
 
-        // Inyección de dependencias del servicio de ventas
-        public VentasController(IVentaService ventaService, IEmailService emailService)
+        // ✅ Constructor correcto con 3 parámetros
+        public VentasController(
+            IVentaService ventaService,
+            IEmailService emailService,
+            EcommerceContext context)  // ✅ Agregar context aquí
         {
             _ventaService = ventaService;
             _emailService = emailService;
+            _context = context;  // ✅ Ahora sí funciona
         }
 
 
@@ -56,7 +62,8 @@ namespace apitextil.Controllers
                 Console.WriteLine($"👤 Nombre: {ventaDto.UsuarioNombre}");
                 Console.WriteLine($"💰 Total: {ventaDto.Total}");
 
-                // ✨ Enviar email usando los campos del DTO
+                // ❌ COMENTAR ESTA SECCIÓN COMPLETA (no enviar email aquí)
+                /*
                 if (!string.IsNullOrEmpty(ventaDto.UsuarioEmail) &&
                     !string.IsNullOrEmpty(ventaDto.UsuarioNombre))
                 {
@@ -65,17 +72,16 @@ namespace apitextil.Controllers
                         Console.WriteLine($"📨 INTENTANDO enviar email a: {ventaDto.UsuarioEmail}");
 
                         await _emailService.EnviarEmailVentaExitosaAsync(
-                            ventaDto.UsuarioEmail,      // Email de tblusuarios
-                            ventaDto.UsuarioNombre,     // Nombre completo
-                            ventaDto.Total,             // Total de la venta
-                            ventaDto.Id.ToString()      // ID de la venta
+                            ventaDto.UsuarioEmail,
+                            ventaDto.UsuarioNombre,
+                            ventaDto.Total,
+                            ventaDto.Id.ToString()
                         );
 
                         Console.WriteLine($"✅✅✅ EMAIL ENVIADO EXITOSAMENTE a: {ventaDto.UsuarioEmail}");
                     }
                     catch (Exception emailEx)
                     {
-                        // Log del error pero no falla la venta
                         Console.WriteLine($"❌❌❌ ERROR al enviar email: {emailEx.Message}");
                         Console.WriteLine($"Stack trace: {emailEx.StackTrace}");
                         Console.WriteLine($"Inner exception: {emailEx.InnerException?.Message}");
@@ -85,6 +91,7 @@ namespace apitextil.Controllers
                 {
                     Console.WriteLine("⚠️ NO se enviará email - Email o Nombre vacío");
                 }
+                */
 
                 Console.WriteLine("🛒 === FIN CrearVentaConDetalles ===");
                 return CreatedAtAction(nameof(CrearVentaConDetalles), new { id = ventaDto.Id }, ventaDto);
@@ -95,6 +102,7 @@ namespace apitextil.Controllers
                 return BadRequest(new { error = ex.Message });
             }
         }
+
 
         // GET: /api/Ventas
         // Obtiene todas las ventas registradas
@@ -128,6 +136,56 @@ namespace apitextil.Controllers
         public class TestEmailDto
         {
             public string Email { get; set; }
+        }
+        // POST: /api/Ventas/notificar-comprobante
+        [HttpPost("notificar-comprobante")]
+        public async Task<IActionResult> NotificarComprobante([FromBody] NotificarComprobanteDto dto)
+        {
+            try
+            {
+                Console.WriteLine($"📧 === Notificando comprobante para venta {dto.VentaId} ===");
+
+                var venta = await _context.Ventas
+                    .Include(v => v.User)
+                    .FirstOrDefaultAsync(v => v.Id == dto.VentaId);
+
+                if (venta == null)
+                {
+                    return NotFound(new { error = $"Venta {dto.VentaId} no encontrada" });
+                }
+
+                var comprobante = await _ventaService.ObtenerComprobantePorVentaAsync(dto.VentaId);
+
+                if (comprobante == null || string.IsNullOrEmpty(comprobante.EnlacePdf))
+                {
+                    return BadRequest(new { error = "No se encontró comprobante con PDF" });
+                }
+
+                var nombreCompleto = $"{venta.User.nombre} {venta.User.apellido}";
+
+                await _emailService.EnviarEmailVentaExitosaAsync(
+                    venta.User.email,
+                    nombreCompleto,
+                    venta.Total,
+                    venta.Id.ToString(),
+                    comprobante.EnlacePdf
+                );
+
+                Console.WriteLine($"✅ Email con PDF enviado a {venta.User.email}");
+
+                return Ok(new { success = true, message = "Email enviado con comprobante" });
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine($"❌ Error: {ex.Message}");
+                return StatusCode(500, new { error = ex.Message });
+            }
+        }
+
+        // DTO para el endpoint
+        public class NotificarComprobanteDto
+        {
+            public int VentaId { get; set; }
         }
 
         // Crea una preferencia de pago en Mercado Pago para iniciar el proceso de pago

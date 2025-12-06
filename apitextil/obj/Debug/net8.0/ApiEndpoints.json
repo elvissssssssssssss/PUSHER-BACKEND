@@ -1490,6 +1490,22 @@
   },
   {
     "ContainingType": "apitextil.Controllers.VentasController",
+    "Method": "NotificarComprobante",
+    "RelativePath": "api/Ventas/notificar-comprobante",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "dto",
+        "Type": "apitextil.Controllers.VentasController\u002BNotificarComprobanteDto",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "apitextil.Controllers.VentasController",
     "Method": "CrearPreferenciaPago",
     "RelativePath": "api/Ventas/preferencia",
     "HttpMethod": "POST",

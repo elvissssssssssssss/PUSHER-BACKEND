@@ -11,7 +11,7 @@ namespace apitextil.Services
     public interface IEmailService
     {
         Task EnviarEmailVentaExitosaAsync(string emailDestino, string nombreCliente,
-            decimal montoTotal, string numeroVenta);
+            decimal montoTotal, string numeroVenta, string enlacePdf = null);
     }
 
     public class EmailService : IEmailService
@@ -34,7 +34,8 @@ namespace apitextil.Services
             string emailDestino,
             string nombreCliente,
             decimal montoTotal,
-            string numeroVenta)
+            string numeroVenta,
+            string enlacePdf = null)
         {
             try
             {
@@ -126,6 +127,27 @@ namespace apitextil.Services
                                     </td>
                                 </tr>
                             </table>
+
+                            {(!string.IsNullOrEmpty(enlacePdf) ? $@"
+                            <!-- BOTÓN DE DESCARGA DE BOLETA -->
+                            <table width='100%' cellpadding='0' cellspacing='0' border='0' style='margin-bottom: 30px;'>
+                                <tr>
+                                    <td align='center'>
+                                        <a href='{enlacePdf}' target='_blank' style='display: inline-block; background: linear-gradient(135deg, #dc2626 0%, #b91c1c 100%); color: #ffffff; text-decoration: none; padding: 16px 40px; border-radius: 8px; font-size: 16px; font-weight: 600; box-shadow: 0 4px 6px rgba(220, 38, 38, 0.3);'>
+                                            📄 Descargar Boleta (PDF)
+                                        </a>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td align='center' style='padding-top: 12px;'>
+                                        <p style='color: #6b7280; font-size: 13px; margin: 0;'>
+                                            También puedes copiar este enlace: <br/>
+                                            <a href='{enlacePdf}' style='color: #dc2626; word-break: break-all;'>{enlacePdf}</a>
+                                        </p>
+                                    </td>
+                                </tr>
+                            </table>
+                            " : "")}
 
                             <!-- Sección de qué sigue -->
                             <div style='background: #f9fafb; border-left: 4px solid #dc2626; padding: 20px; border-radius: 6px; margin-bottom: 25px;'>
