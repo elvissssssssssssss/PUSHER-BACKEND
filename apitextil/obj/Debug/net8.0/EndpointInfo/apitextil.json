@@ -1356,6 +1356,150 @@
         }
       }
     },
+    "/api/Ventas/pago/voucher-completo": {
+      "post": {
+        "tags": [
+          "PagoVoucher"
+        ],
+        "requestBody": {
+          "content": {
+            "multipart/form-data": {
+              "schema": {
+                "required": [
+                  "ClienteApellidos",
+                  "ClienteNombres",
+                  "Detalles",
+                  "TipoComprobante",
+                  "Total",
+                  "UserId",
+                  "Voucher"
+                ],
+                "type": "object",
+                "properties": {
+                  "Voucher": {
+                    "type": "string",
+                    "format": "binary"
+                  },
+                  "UserId": {
+                    "maximum": 2147483647,
+                    "minimum": 1,
+                    "type": "integer",
+                    "format": "int32"
+                  },
+                  "Total": {
+                    "minimum": 0.01,
+                    "type": "number",
+                    "format": "double"
+                  },
+                  "NumeroOperacion": {
+                    "maxLength": 100,
+                    "minLength": 0,
+                    "type": "string"
+                  },
+                  "ClienteNombres": {
+                    "maxLength": 50,
+                    "minLength": 0,
+                    "type": "string"
+                  },
+                  "ClienteApellidos": {
+                    "maxLength": 50,
+                    "minLength": 0,
+                    "type": "string"
+                  },
+                  "ClienteDNI": {
+                    "maxLength": 20,
+                    "minLength": 0,
+                    "type": "string"
+                  },
+                  "TipoComprobante": {
+                    "maxLength": 20,
+                    "minLength": 0,
+                    "type": "string"
+                  },
+                  "Ruc": {
+                    "maxLength": 11,
+                    "minLength": 0,
+                    "type": "string"
+                  },
+                  "RazonSocial": {
+                    "maxLength": 100,
+                    "minLength": 0,
+                    "type": "string"
+                  },
+                  "Detalles": {
+                    "type": "string"
+                  }
+                }
+              },
+              "encoding": {
+                "Voucher": {
+                  "style": "form"
+                },
+                "UserId": {
+                  "style": "form"
+                },
+                "Total": {
+                  "style": "form"
+                },
+                "NumeroOperacion": {
+                  "style": "form"
+                },
+                "ClienteNombres": {
+                  "style": "form"
+                },
+                "ClienteApellidos": {
+                  "style": "form"
+                },
+                "ClienteDNI": {
+                  "style": "form"
+                },
+                "TipoComprobante": {
+                  "style": "form"
+                },
+                "Ruc": {
+                  "style": "form"
+                },
+                "RazonSocial": {
+                  "style": "form"
+                },
+                "Detalles": {
+                  "style": "form"
+                }
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/Ventas/pago/ping": {
+      "get": {
+        "tags": [
+          "PagoVoucher"
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/Ventas/pago/config": {
+      "get": {
+        "tags": [
+          "PagoVoucher"
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
     "/api/Productos": {
       "get": {
         "tags": [

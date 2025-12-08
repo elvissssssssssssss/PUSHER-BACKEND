@@ -31,4 +31,16 @@ wwwroot\uploads\logo.png
 wwwroot\uploads\ovlxfigvszc61.jpg
 wwwroot\uploads\perfecta.jpg
 wwwroot\uploads\productos\casacaM8 - copia.jpg
+wwwroot\uploads\vouchers\voucher-20251208-032822-0ca7c533-9d6c-436a-8cb6-8e2f6180d894.png
+wwwroot\uploads\vouchers\voucher-20251208-033338-c3152d43-0398-4ccb-858b-cd0ada650543.png
+wwwroot\uploads\vouchers\voucher-20251208-033500-26e352ae-18f8-4382-be6e-4d94943056f9.png
+wwwroot\uploads\vouchers\voucher-20251208-033526-506101ca-8d86-4e79-b06b-2556f2e70848.png
+wwwroot\uploads\vouchers\voucher-20251208-033725-c9e86d86-0793-4288-abe4-59f31b6ae624.png
+wwwroot\uploads\vouchers\voucher-20251208-033750-63d9f6a1-1b18-4e41-a163-cfe50ba8cf01.png
+wwwroot\uploads\vouchers\voucher-20251208-033835-d9328459-ebea-4294-a823-1cbe12ecb907.png
+wwwroot\uploads\vouchers\voucher-20251208-034424-b095eea2-67b6-4bf9-bd60-cb9535dca82f.png
+wwwroot\uploads\vouchers\voucher-20251208-034514-6b8a7446-6438-4d0c-99df-e222053cecdb.png
+wwwroot\uploads\vouchers\voucher-20251208-034626-b066149d-dd0a-42a6-8aaa-918772467071.png
+wwwroot\uploads\vouchers\voucher-20251208-034644-93ea66ea-7b2c-4303-9b9e-5659a6ec0af5.png
+wwwroot\uploads\vouchers\voucher-20251208-034654-94d52a5f-8514-4a68-a110-e6c93058f3d5.png
 wwwroot\uploads\we.webp

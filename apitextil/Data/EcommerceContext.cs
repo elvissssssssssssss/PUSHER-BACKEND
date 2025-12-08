@@ -1,8 +1,9 @@
 ﻿
+using apitextilECommerceAPI.Models;
     using global::apitextil.Models;
      
     using Microsoft.EntityFrameworkCore;
-using apitextilECommerceAPI.Models;
+
 
 
 namespace apitextil.Data
@@ -40,7 +41,9 @@ namespace apitextil.Data
         public DbSet<LoginAdmin> LoginAdmins { get; set; }
 
         public DbSet<Rol> Roles { get; set; }
+        public DbSet<TblVoucher> TblVouchers { get; set; }
 
+        public DbSet<TblConfigPago> TblConfigPagos { get; set; }
 
 
 
@@ -365,6 +368,103 @@ namespace apitextil.Data
             });
 
             // ... (otras configuraciones existentes)
+            // 🆕 Configuración para TblVoucher
+            // 🆕 Configuración para TblVoucher
+            // 🆕 Configuración para TblVoucher
+            // Agregar al final de OnModelCreating(), antes del base.OnModelCreating(modelBuilder);
+
+            // 🆕 Configuración para TblVoucher
+            // 🆕 Configuración para TblVoucher
+            modelBuilder.Entity<TblVoucher>(entity =>
+            {
+                entity.ToTable("tblvouchers");
+                entity.HasKey(e => e.Id);
+
+                entity.Property(e => e.Id)
+                    .HasColumnName("id")
+                    .ValueGeneratedOnAdd();
+
+                // ✅ Ahora es int, no long
+                entity.Property(e => e.OrderId)
+                    .HasColumnName("order_id")
+                    .HasColumnType("int(11)")  // ⚠️ int, no bigint
+                    .IsRequired();
+
+                entity.Property(e => e.VoucherArchivo)
+                    .HasColumnName("voucher_archivo")
+                    .HasMaxLength(500)
+                    .IsRequired();
+
+                entity.Property(e => e.NumeroOperacion)
+                    .HasColumnName("numero_operacion")
+                    .HasMaxLength(100);
+
+                entity.Property(e => e.Estado)
+                    .HasColumnName("estado")
+                    .HasMaxLength(50)
+                    .IsRequired()
+                    .HasDefaultValue("pendiente");
+
+                entity.Property(e => e.Observacion)
+                    .HasColumnName("observacion")
+                    .HasColumnType("text");
+
+                entity.Property(e => e.FechaSubida)
+                    .HasColumnName("fecha_subida")
+                    .HasColumnType("timestamp")
+                    .HasDefaultValueSql("CURRENT_TIMESTAMP");
+
+                entity.Property(e => e.FechaRevision)
+                    .HasColumnName("fecha_revision")
+                    .HasColumnType("timestamp");
+
+                // ✅ Relación con Venta (ahora compatible: int con int)
+                entity.HasOne(d => d.Venta)
+                    .WithMany()
+                    .HasForeignKey(d => d.OrderId)
+                    .OnDelete(DeleteBehavior.Cascade)
+                    .HasConstraintName("fk_voucher_venta");
+            });
+
+
+            // 🆕 Configuración para TblConfigPago
+            modelBuilder.Entity<TblConfigPago>(entity =>
+            {
+                entity.ToTable("tblconfig_pago");
+                entity.HasKey(e => e.Id);
+
+                entity.Property(e => e.Id)
+                    .HasColumnName("id")
+                    .ValueGeneratedOnAdd();
+
+                entity.Property(e => e.CuentaSoles)
+                    .HasColumnName("cuenta_soles")
+                    .HasMaxLength(50);
+
+                entity.Property(e => e.Cci)
+                    .HasColumnName("cci")
+                    .HasMaxLength(50);
+
+                entity.Property(e => e.CuentaActiva)
+                    .HasColumnName("cuenta_activa")
+                    .IsRequired();
+
+                entity.Property(e => e.YapeQr)
+                    .HasColumnName("yape_qr")
+                    .HasMaxLength(255);
+
+                entity.Property(e => e.CreatedAt)
+                    .HasColumnName("created_at")
+                    .HasColumnType("timestamp")
+                    .HasDefaultValueSql("CURRENT_TIMESTAMP");
+
+                entity.Property(e => e.UpdatedAt)
+                    .HasColumnName("updated_at")
+                    .HasColumnType("timestamp")
+                    .HasDefaultValueSql("CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP");
+            });
+
+
 
             // ✅ NUEVAS CONFIGURACIONES para las tablas de seguimiento
             modelBuilder.Entity<EstadoEnvio>(entity =>
@@ -407,6 +507,7 @@ namespace apitextil.Data
                     .OnDelete(DeleteBehavior.Cascade)
                     .HasConstraintName("fk_seguimiento_estado");
             });
+
 
             modelBuilder.Entity<DocumentoEnvio>(entity =>
             {

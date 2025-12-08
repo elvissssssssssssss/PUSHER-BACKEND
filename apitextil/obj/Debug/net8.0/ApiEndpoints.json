@@ -1505,6 +1505,92 @@
     "ReturnTypes": []
   },
   {
+    "ContainingType": "apitextil.Controllers.PagoVoucherController",
+    "Method": "ObtenerConfigPago",
+    "RelativePath": "api/Ventas/pago/config",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "apitextil.Controllers.PagoVoucherController",
+    "Method": "Ping",
+    "RelativePath": "api/Ventas/pago/ping",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "apitextil.Controllers.PagoVoucherController",
+    "Method": "SubirVoucherCompleto",
+    "RelativePath": "api/Ventas/pago/voucher-completo",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "Voucher",
+        "Type": "Microsoft.AspNetCore.Http.IFormFile",
+        "IsRequired": false
+      },
+      {
+        "Name": "UserId",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "Total",
+        "Type": "System.Decimal",
+        "IsRequired": false
+      },
+      {
+        "Name": "NumeroOperacion",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "ClienteNombres",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "ClienteApellidos",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "ClienteDNI",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "TipoComprobante",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "Ruc",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "RazonSocial",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "Detalles",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
     "ContainingType": "apitextil.Controllers.VentasController",
     "Method": "CrearPreferenciaPago",
     "RelativePath": "api/Ventas/preferencia",
