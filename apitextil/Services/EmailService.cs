@@ -1,4 +1,6 @@
 ﻿// Services/EmailService.cs
+using apitextil.Data;
+using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.Logging;
 using System.Net.Http;
@@ -10,6 +12,7 @@ namespace apitextil.Services
 {
     public interface IEmailService
     {
+        Task EnviarCorreoPagoConfirmado(int ventaId);
         Task EnviarEmailVentaExitosaAsync(string emailDestino, string nombreCliente,
             decimal montoTotal, string numeroVenta, string enlacePdf = null);
     }
@@ -19,16 +22,45 @@ namespace apitextil.Services
         private readonly IConfiguration _configuration;
         private readonly ILogger<EmailService> _logger;
         private readonly IHttpClientFactory _httpClientFactory;
+        private readonly EcommerceContext _context; // ⬅️ nuevo
 
         public EmailService(
             IConfiguration configuration,
             ILogger<EmailService> logger,
-            IHttpClientFactory httpClientFactory)
+            IHttpClientFactory httpClientFactory,
+        EcommerceContext context)
         {
             _configuration = configuration;
             _logger = logger;
             _httpClientFactory = httpClientFactory;
+            _context = context;
         }
+
+        public async Task EnviarCorreoPagoConfirmado(int ventaId)
+        {
+            var venta = await _context.Ventas
+                .Include(v => v.User)               // FK a tblusuarios
+                .FirstOrDefaultAsync(v => v.Id == ventaId);
+
+            if (venta == null)
+                return;
+
+            var email = venta.User?.email ?? string.Empty;
+            var nombre = $"{venta.User?.nombre} {venta.User?.apellido}".Trim();
+
+            if (string.IsNullOrWhiteSpace(email))
+                return;
+
+            await EnviarEmailVentaExitosaAsync(
+                email,
+                string.IsNullOrWhiteSpace(nombre) ? "Cliente" : nombre,
+                venta.Total,
+                venta.Id.ToString(),
+                enlacePdf: null
+            );
+        }
+
+
 
         public async Task EnviarEmailVentaExitosaAsync(
             string emailDestino,

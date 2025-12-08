@@ -52,6 +52,7 @@ namespace apitextil.Models
 
 
         public virtual ComprobanteVenta? Comprobante { get; set; }
+        //public string MetodoPagoNombre { get; internal set; }
 
 
 

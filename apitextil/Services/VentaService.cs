@@ -131,14 +131,31 @@ namespace apitextil.Services
         {
             return await _context.Ventas
                 .Include(v => v.Detalles)
-                .ThenInclude(d => d.Producto)
+                    .ThenInclude(d => d.Producto)
+                .Include(v => v.User)              // navegación a tblusuarios
                 .Select(v => new VentaDto
                 {
                     Id = v.Id,
                     UserId = v.UserId,
+
+                    UsuarioEmail = v.User.email,
+                    UsuarioNombre = v.User.nombre + " " + v.User.apellido,
+
                     MetodoPagoId = v.MetodoPagoId,
+                    MetodoPagoNombre = string.Empty,   // de momento sin nombre
+
                     Total = v.Total,
                     FechaVenta = v.FechaVenta,
+
+                    EstadoVoucher = _context.TblVouchers
+                        .Where(x => x.OrderId == v.Id)
+                        .Select(x => x.Estado)
+                        .FirstOrDefault(),
+                    VoucherArchivo = _context.TblVouchers
+                        .Where(x => x.OrderId == v.Id)
+                        .Select(x => x.VoucherArchivo)
+                        .FirstOrDefault(),
+
                     Detalles = v.Detalles.Select(d => new DetalleVentaDto
                     {
                         ProductoId = d.ProductoId,
@@ -146,8 +163,10 @@ namespace apitextil.Services
                         Cantidad = d.Cantidad,
                         Precio = d.Precio
                     }).ToList()
-                }).ToListAsync();
+                })
+                .ToListAsync();
         }
+
 
 
 

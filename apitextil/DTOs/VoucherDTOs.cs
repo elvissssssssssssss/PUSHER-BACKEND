@@ -18,7 +18,7 @@ namespace apitextil.DTOs
         public decimal Total { get; set; }
 
         [StringLength(100)]
-        public string NumeroOperacion { get; set; }
+        public string? NumeroOperacion { get; set; }
 
         [Required(ErrorMessage = "El nombre es obligatorio")]
         [StringLength(50)]
@@ -29,17 +29,17 @@ namespace apitextil.DTOs
         public string ClienteApellidos { get; set; }
 
         [StringLength(20)]  // ✅ Cambiado de 8 a 20
-        public string ClienteDNI { get; set; }
+        public string? ClienteDNI { get; set; }
 
         [Required]
         [StringLength(20)]
-        public string TipoComprobante { get; set; }
+        public string? TipoComprobante { get; set; }
 
         [StringLength(11)]
-        public string Ruc { get; set; }
+        public string? Ruc { get; set; }
 
         [StringLength(100)]
-        public string RazonSocial { get; set; }
+        public string? RazonSocial { get; set; }
 
         [Required(ErrorMessage = "Los detalles son obligatorios")]
         public string Detalles { get; set; }

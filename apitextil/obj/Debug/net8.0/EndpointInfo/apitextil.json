@@ -1488,6 +1488,29 @@
         }
       }
     },
+    "/api/Ventas/pago/ventas/{ventaId}/voucher/verificar": {
+      "post": {
+        "tags": [
+          "PagoVoucher"
+        ],
+        "parameters": [
+          {
+            "name": "ventaId",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
     "/api/Ventas/pago/config": {
       "get": {
         "tags": [

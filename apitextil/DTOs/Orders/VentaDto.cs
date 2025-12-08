@@ -17,6 +17,9 @@ namespace apitextil.DTOs.Orders
         public DateTime FechaVenta { get; set; }
         // ✅ NUEVO: URL de pago de Mercado Pago
         public string? InitPoint { get; set; }
+        // 🆕 estado y archivo de voucher a nivel de venta
+        public string? EstadoVoucher { get; set; }
+        public string? VoucherArchivo { get; set; }
         public List<DetalleVentaDto> Detalles { get; set; } = new();
     }
 

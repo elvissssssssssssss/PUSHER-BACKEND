@@ -23,7 +23,7 @@ namespace apitextilECommerceAPI.Models
 
         [Column("numero_operacion")]
         [StringLength(100)]
-        public string NumeroOperacion { get; set; }
+        public string? NumeroOperacion { get; set; }
 
         [Column("estado")]
         [Required]
@@ -31,7 +31,7 @@ namespace apitextilECommerceAPI.Models
         public string Estado { get; set; } = "pendiente";
 
         [Column("observacion")]
-        public string Observacion { get; set; }
+        public string? Observacion { get; set; }
 
         [Column("fecha_subida")]
         public DateTime FechaSubida { get; set; }

@@ -1,6 +1,7 @@
 ﻿using apitextil.Data;
 using apitextil.DTOs;
 using apitextil.Models;
+using apitextil.Services;
 using apitextilECommerceAPI.Models;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
@@ -19,11 +20,17 @@ namespace apitextil.Controllers
     {
         private readonly EcommerceContext _context;
         private readonly IWebHostEnvironment _env;
+        private readonly IEmailService _emailService;   // ⬅️ campo correcto
 
-        public PagoVoucherController(EcommerceContext context, IWebHostEnvironment env)
+
+        public PagoVoucherController(
+             EcommerceContext context,
+             IWebHostEnvironment env,
+             IEmailService emailService)                  // ⬅️ se inyecta aquí
         {
             _context = context;
             _env = env;
+            _emailService = emailService;               // ⬅️ se asigna aquí
         }
 
         // POST: api/Ventas/pago/voucher-completo
@@ -262,6 +269,26 @@ namespace apitextil.Controllers
         {
             Console.WriteLine("🏓 Entró a /api/Ventas/pago/ping");
             return Ok("pong");
+        }
+        // Controllers/AdminVentasController.cs
+        [HttpPost("ventas/{ventaId}/voucher/verificar")]
+        public async Task<IActionResult> VerificarVoucher(int ventaId)
+        {
+            var voucher = await _context.TblVouchers
+                .FirstOrDefaultAsync(v => v.OrderId == ventaId);
+
+            if (voucher == null)
+                return NotFound();
+
+            voucher.Estado = "verificado";
+            voucher.FechaRevision = DateTime.Now;
+
+            await _context.SaveChangesAsync();
+
+            // ⚠️ Desactiva el correo mientras debugueas el null
+            await _emailService.EnviarCorreoPagoConfirmado(ventaId);
+
+            return Ok(new { success = true });
         }
 
         // GET: api/Ventas/pago/config
