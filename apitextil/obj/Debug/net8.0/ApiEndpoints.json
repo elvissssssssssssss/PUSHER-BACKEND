@@ -1526,6 +1526,27 @@
   },
   {
     "ContainingType": "apitextil.Controllers.PagoVoucherController",
+    "Method": "RechazarVoucher",
+    "RelativePath": "api/Ventas/pago/ventas/{ventaId}/voucher/rechazar",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "ventaId",
+        "Type": "System.Int32",
+        "IsRequired": true
+      },
+      {
+        "Name": "observacion",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "apitextil.Controllers.PagoVoucherController",
     "Method": "VerificarVoucher",
     "RelativePath": "api/Ventas/pago/ventas/{ventaId}/voucher/verificar",
     "HttpMethod": "POST",

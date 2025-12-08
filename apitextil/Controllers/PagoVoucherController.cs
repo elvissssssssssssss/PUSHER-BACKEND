@@ -271,6 +271,8 @@ namespace apitextil.Controllers
             return Ok("pong");
         }
         // Controllers/AdminVentasController.cs
+        // Controllers/PagoVoucherController.cs
+
         [HttpPost("ventas/{ventaId}/voucher/verificar")]
         public async Task<IActionResult> VerificarVoucher(int ventaId)
         {
@@ -280,16 +282,37 @@ namespace apitextil.Controllers
             if (voucher == null)
                 return NotFound();
 
-            voucher.Estado = "verificado";
+            voucher.Estado = "aprobado"; // ENUM: pendiente, aprobado, rechazado
             voucher.FechaRevision = DateTime.Now;
 
             await _context.SaveChangesAsync();
-
-            // ⚠️ Desactiva el correo mientras debugueas el null
             await _emailService.EnviarCorreoPagoConfirmado(ventaId);
 
             return Ok(new { success = true });
         }
+
+        [HttpPost("ventas/{ventaId}/voucher/rechazar")]
+        public async Task<IActionResult> RechazarVoucher(int ventaId, [FromBody] string? observacion)
+        {
+            var voucher = await _context.TblVouchers
+                .FirstOrDefaultAsync(v => v.OrderId == ventaId);
+
+            if (voucher == null)
+                return NotFound();
+
+            voucher.Estado = "rechazado";
+            voucher.Observacion = observacion;
+            voucher.FechaRevision = DateTime.Now;
+
+            await _context.SaveChangesAsync();
+
+            // ✅ enviar correo de rechazo
+            await _emailService.EnviarCorreoPagoRechazado(ventaId, observacion);
+
+            return Ok(new { success = true });
+        }
+
+
 
         // GET: api/Ventas/pago/config
         [HttpGet("config")]

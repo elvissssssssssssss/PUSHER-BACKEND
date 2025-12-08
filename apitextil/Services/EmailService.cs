@@ -13,6 +13,7 @@ namespace apitextil.Services
     public interface IEmailService
     {
         Task EnviarCorreoPagoConfirmado(int ventaId);
+        Task EnviarCorreoPagoRechazado(int ventaId, string? observacion);
         Task EnviarEmailVentaExitosaAsync(string emailDestino, string nombreCliente,
             decimal montoTotal, string numeroVenta, string enlacePdf = null);
     }
@@ -34,6 +35,29 @@ namespace apitextil.Services
             _logger = logger;
             _httpClientFactory = httpClientFactory;
             _context = context;
+        }
+        public async Task EnviarCorreoPagoRechazado(int ventaId, string? observacion)
+        {
+            var venta = await _context.Ventas
+                .Include(v => v.User)
+                .FirstOrDefaultAsync(v => v.Id == ventaId);
+
+            if (venta == null)
+                return;
+
+            var email = venta.User?.email ?? string.Empty;
+            var nombre = $"{venta.User?.nombre} {venta.User?.apellido}".Trim();
+
+            if (string.IsNullOrWhiteSpace(email))
+                return;
+
+            await EnviarEmailPagoRechazadoAsync(
+                email,
+                string.IsNullOrWhiteSpace(nombre) ? "Cliente" : nombre,
+                venta.Total,
+                venta.Id.ToString(),
+                observacion
+            );
         }
 
         public async Task EnviarCorreoPagoConfirmado(int ventaId)
@@ -61,6 +85,125 @@ namespace apitextil.Services
         }
 
 
+        private async Task EnviarEmailPagoRechazadoAsync(
+    string emailDestino,
+    string nombreCliente,
+    decimal montoTotal,
+    string numeroVenta,
+    string? observacion)
+        {
+            try
+            {
+                Console.WriteLine($"📧 [RESEND] Enviando rechazo a: {emailDestino}");
+
+                var apiKey = _configuration["RESEND_API_KEY"];
+                if (string.IsNullOrEmpty(apiKey))
+                    throw new Exception("RESEND_API_KEY no configurada");
+
+                var client = _httpClientFactory.CreateClient();
+                client.DefaultRequestHeaders.Authorization =
+                    new AuthenticationHeaderValue("Bearer", apiKey);
+
+                var emailData = new
+                {
+                    from = "NTX-SAC <onboarding@resend.dev>",
+                    to = new[] { emailDestino },
+                    subject = $"⚠️ Pago rechazado - Pedido #{numeroVenta}",
+                    html = $@"
+<!DOCTYPE html>
+<html lang='es'>
+<head>
+    <meta charset='UTF-8'>
+    <meta name='viewport' content='width=device-width, initial-scale=1.0'>
+    <title>Pago rechazado</title>
+</head>
+<body style='margin:0;padding:0;background-color:#f9fafb;font-family:-apple-system,BlinkMacSystemFont,""Segoe UI"",Roboto,Arial,sans-serif;'>
+<table width='100%' cellpadding='0' cellspacing='0' border='0' style='padding:40px 20px;'>
+<tr>
+<td align='center'>
+<table width='600' cellpadding='0' cellspacing='0' border='0' style='background-color:#ffffff;border-radius:12px;box-shadow:0 4px 12px rgba(0,0,0,0.06);overflow:hidden;'>
+    <tr>
+        <td style='background:linear-gradient(135deg,#b91c1c,#7f1d1d);padding:32px 24px;text-align:center;'>
+            <h1 style='color:#fff;margin:0 0 8px 0;font-size:26px;font-weight:700;'>
+                Pago rechazado
+            </h1>
+            <p style='color:rgba(255,255,255,0.9);margin:0;font-size:14px;'>
+                Pedido #{numeroVenta}
+            </p>
+        </td>
+    </tr>
+    <tr>
+        <td style='padding:32px 24px;'>
+            <h2 style='color:#111827;margin:0 0 16px 0;font-size:20px;font-weight:600;'>
+                Hola {nombreCliente},
+            </h2>
+            <p style='color:#4b5563;line-height:1.7;margin:0 0 16px 0;font-size:14px;'>
+                Tu pago para el pedido <strong>#{numeroVenta}</strong> no pudo ser aprobado.
+            </p>
+            <p style='color:#4b5563;line-height:1.7;margin:0 0 20px 0;font-size:14px;'>
+                Monto del pedido: <strong>S/ {montoTotal:F2}</strong>
+            </p>
+            {(string.IsNullOrWhiteSpace(observacion) ? "" : $@"
+            <div style='background:#fef2f2;border-left:4px solid #dc2626;padding:16px;border-radius:6px;margin-bottom:20px;'>
+                <p style='color:#991b1b;font-size:14px;margin:0 0 4px 0;font-weight:600;'>
+                    Motivo del rechazo:
+                </p>
+                <p style='color:#4b5563;font-size:14px;margin:0;line-height:1.6;'>
+                    {observacion}
+                </p>
+            </div>
+            ")}
+            <p style='color:#4b5563;line-height:1.7;margin:0 0 16px 0;font-size:14px;'>
+                Puedes volver a intentar el pago desde tu cuenta o elegir otro método de pago.
+            </p>
+            <p style='color:#4b5563;line-height:1.7;margin:0 0 24px 0;font-size:14px;'>
+                Ante cualquier duda, contáctanos por nuestros canales de atención.
+            </p>
+        </td>
+    </tr>
+    <tr>
+        <td style='background:#111827;padding:24px;text-align:center;'>
+            <p style='color:#f9fafb;font-size:15px;margin:0 0 6px 0;font-weight:600;'>
+                <span style='color:#dc2626;'>NTX-SAC</span> Tienda Textil
+            </p>
+            <p style='color:#9ca3af;font-size:12px;margin:0;'>
+                Este es un correo automático, por favor no respondas directamente.
+            </p>
+        </td>
+    </tr>
+</table>
+<p style='color:#9ca3af;font-size:11px;text-align:center;margin:16px 0 0 0;max-width:480px;'>
+    Este correo fue enviado a {emailDestino} porque registraste un pedido en nuestra tienda.
+</p>
+</td>
+</tr>
+</table>
+</body>
+</html>"
+                };
+
+                var json = JsonSerializer.Serialize(emailData);
+                var content = new StringContent(json, Encoding.UTF8, "application/json");
+
+                var response = await client.PostAsync("https://api.resend.com/emails", content);
+                var responseBody = await response.Content.ReadAsStringAsync();
+
+                if (response.IsSuccessStatusCode)
+                {
+                    _logger.LogInformation($"Email de rechazo enviado a {emailDestino}");
+                }
+                else
+                {
+                    _logger.LogError($"Error Resend rechazo: {responseBody}");
+                    throw new Exception($"Error al enviar email rechazo: {responseBody}");
+                }
+            }
+            catch (Exception ex)
+            {
+                _logger.LogError($"Error en EnviarEmailPagoRechazadoAsync: {ex.Message}");
+                throw;
+            }
+        }
 
         public async Task EnviarEmailVentaExitosaAsync(
             string emailDestino,
