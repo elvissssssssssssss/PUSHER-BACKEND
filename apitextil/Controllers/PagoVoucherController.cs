@@ -291,8 +291,15 @@ namespace apitextil.Controllers
             return Ok(new { success = true });
         }
 
+        public class RechazoVoucherDto
+        {
+            public string? Observacion { get; set; }
+        }
+
         [HttpPost("ventas/{ventaId}/voucher/rechazar")]
-        public async Task<IActionResult> RechazarVoucher(int ventaId, [FromBody] string? observacion)
+        public async Task<IActionResult> RechazarVoucher(
+            int ventaId,
+            [FromBody] RechazoVoucherDto body)
         {
             var voucher = await _context.TblVouchers
                 .FirstOrDefaultAsync(v => v.OrderId == ventaId);
@@ -300,18 +307,17 @@ namespace apitextil.Controllers
             if (voucher == null)
                 return NotFound();
 
+            var observacion = body?.Observacion;
+
             voucher.Estado = "rechazado";
             voucher.Observacion = observacion;
             voucher.FechaRevision = DateTime.Now;
 
             await _context.SaveChangesAsync();
-
-            // ✅ enviar correo de rechazo
             await _emailService.EnviarCorreoPagoRechazado(ventaId, observacion);
 
             return Ok(new { success = true });
         }
-
 
 
         // GET: api/Ventas/pago/config

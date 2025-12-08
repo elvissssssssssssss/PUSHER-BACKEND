@@ -3,12 +3,12 @@
   "WorkspaceRootPath": "C:\\Users\\USER\\Documents\\GIT-HUB-ACTUAL-\\PUSHER-BACKEND\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{C68D0803-E339-4F2C-BAD4-46369BEAA511}|apitextil\\apitextil.csproj|c:\\users\\user\\documents\\git-hub-actual-\\pusher-backend\\apitextil\\controllers\\niubizcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{C68D0803-E339-4F2C-BAD4-46369BEAA511}|apitextil\\apitextil.csproj|solutionrelative:apitextil\\controllers\\niubizcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{C68D0803-E339-4F2C-BAD4-46369BEAA511}|apitextil\\apitextil.csproj|c:\\users\\user\\documents\\git-hub-actual-\\pusher-backend\\apitextil\\controllers\\pagovouchercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{C68D0803-E339-4F2C-BAD4-46369BEAA511}|apitextil\\apitextil.csproj|solutionrelative:apitextil\\controllers\\pagovouchercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C68D0803-E339-4F2C-BAD4-46369BEAA511}|apitextil\\apitextil.csproj|c:\\users\\user\\documents\\git-hub-actual-\\pusher-backend\\apitextil\\controllers\\niubizcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C68D0803-E339-4F2C-BAD4-46369BEAA511}|apitextil\\apitextil.csproj|solutionrelative:apitextil\\controllers\\niubizcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{C68D0803-E339-4F2C-BAD4-46369BEAA511}|apitextil\\apitextil.csproj|c:\\users\\user\\documents\\git-hub-actual-\\pusher-backend\\apitextil\\services\\emailservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -357,7 +357,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 6,
+          "SelectedChildIndex": 2,
           "Children": [
             {
               "$type": "Document",
@@ -382,18 +382,17 @@
               "RelativeToolTip": "apitextil\\Services\\iRoleService.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-12-08T15:24:03.431Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-12-08T15:24:03.431Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 0,
               "Title": "PagoVoucherController.cs",
               "DocumentMoniker": "C:\\Users\\USER\\Documents\\GIT-HUB-ACTUAL-\\PUSHER-BACKEND\\apitextil\\Controllers\\PagoVoucherController.cs",
               "RelativeDocumentMoniker": "apitextil\\Controllers\\PagoVoucherController.cs",
               "ToolTip": "C:\\Users\\USER\\Documents\\GIT-HUB-ACTUAL-\\PUSHER-BACKEND\\apitextil\\Controllers\\PagoVoucherController.cs",
               "RelativeToolTip": "apitextil\\Controllers\\PagoVoucherController.cs",
-              "ViewState": "AgIAABsBAAAAAAAAAAAowDkBAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAABEBAAAAAAAAAAAAwCUBAAAFAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-12-08T07:51:51.191Z",
               "EditorCaption": ""
@@ -408,26 +407,17 @@
               "RelativeToolTip": "apitextil\\Services\\EmailService.cs",
               "ViewState": "AgIAAGEBAAAAAAAAAAAowI4BAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-12-05T05:24:11.07Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Bookmark",
-              "Name": "ST:1:0:{d212f56b-c48a-434c-a121-1c5d80b59b9f}"
-            },
-            {
-              "$type": "Bookmark",
-              "Name": "ST:0:0:{34e76e81-ee4a-11d0-ae2e-00a0c90fffc3}"
+              "WhenOpened": "2025-12-05T05:24:11.07Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 1,
               "Title": "NiubizController.cs",
               "DocumentMoniker": "C:\\Users\\USER\\Documents\\GIT-HUB-ACTUAL-\\PUSHER-BACKEND\\apitextil\\Controllers\\NiubizController.cs",
               "RelativeDocumentMoniker": "apitextil\\Controllers\\NiubizController.cs",
               "ToolTip": "C:\\Users\\USER\\Documents\\GIT-HUB-ACTUAL-\\PUSHER-BACKEND\\apitextil\\Controllers\\NiubizController.cs",
               "RelativeToolTip": "apitextil\\Controllers\\NiubizController.cs",
-              "ViewState": "AgIAAB4AAAAAAAAAAAAkwCQAAABBAAAAAAAAAA==",
+              "ViewState": "AgIAAB4AAAAAAAAAAAAkwDEAAAAFAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-07-12T03:58:33.668Z",
               "EditorCaption": ""
@@ -442,8 +432,7 @@
               "RelativeToolTip": "apitextil\\Services\\ProductoService.cs",
               "ViewState": "AgIAACIAAAAAAAAAAAAgwCAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-24T03:55:14.728Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-06-24T03:55:14.728Z"
             },
             {
               "$type": "Document",
@@ -455,8 +444,7 @@
               "RelativeToolTip": "apitextil\\Services\\NotificationService.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAACkAAAAsAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-23T00:49:45.251Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-11-23T00:49:45.251Z"
             },
             {
               "$type": "Document",
@@ -468,8 +456,7 @@
               "RelativeToolTip": "apitextil\\Services\\MensajeChatService.cs",
               "ViewState": "AgIAABgAAAAAAAAAAAAYwB8AAAA5AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-10-20T04:55:23.214Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-10-20T04:55:23.214Z"
             },
             {
               "$type": "Document",
@@ -481,8 +468,7 @@
               "RelativeToolTip": "apitextil\\Services\\TblEnviosService.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-12-08T13:47:36.223Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-12-08T13:47:36.223Z"
             },
             {
               "$type": "Document",
@@ -494,8 +480,7 @@
               "RelativeToolTip": "apitextil\\Models\\Venta.cs",
               "ViewState": "AgIAAB8AAAAAAAAAAAAIwDwAAAAFAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-07-11T05:08:04.681Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-07-11T05:08:04.681Z"
             },
             {
               "$type": "Document",
@@ -1422,7 +1407,11 @@
             },
             {
               "$type": "Bookmark",
-              "Name": "ST:0:0:{6324226f-61b6-4f28-92ee-18d4b5fe1e48}"
+              "Name": "ST:1:0:{d212f56b-c48a-434c-a121-1c5d80b59b9f}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{34e76e81-ee4a-11d0-ae2e-00a0c90fffc3}"
             },
             {
               "$type": "Bookmark",
