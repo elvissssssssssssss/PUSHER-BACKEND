@@ -43,4 +43,5 @@ wwwroot\uploads\vouchers\voucher-20251208-034514-6b8a7446-6438-4d0c-99df-e222053
 wwwroot\uploads\vouchers\voucher-20251208-034626-b066149d-dd0a-42a6-8aaa-918772467071.png
 wwwroot\uploads\vouchers\voucher-20251208-034644-93ea66ea-7b2c-4303-9b9e-5659a6ec0af5.png
 wwwroot\uploads\vouchers\voucher-20251208-034654-94d52a5f-8514-4a68-a110-e6c93058f3d5.png
+wwwroot\uploads\vouchers\voucher-20251208-054705-494fecac-e111-45d1-9e8f-505a42743040.png
 wwwroot\uploads\we.webp
