@@ -1531,17 +1531,17 @@
           "content": {
             "application/json": {
               "schema": {
-                "type": "string"
+                "$ref": "#/components/schemas/RechazoVoucherDto"
               }
             },
             "text/json": {
               "schema": {
-                "type": "string"
+                "$ref": "#/components/schemas/RechazoVoucherDto"
               }
             },
             "application/*+json": {
               "schema": {
-                "type": "string"
+                "$ref": "#/components/schemas/RechazoVoucherDto"
               }
             }
           }
@@ -3635,6 +3635,16 @@
             "nullable": true
           },
           "channel_name": {
+            "type": "string",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "RechazoVoucherDto": {
+        "type": "object",
+        "properties": {
+          "observacion": {
             "type": "string",
             "nullable": true
           }

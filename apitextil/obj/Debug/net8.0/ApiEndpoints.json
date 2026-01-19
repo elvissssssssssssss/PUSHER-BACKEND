@@ -1538,9 +1538,9 @@
         "IsRequired": true
       },
       {
-        "Name": "observacion",
-        "Type": "System.String",
-        "IsRequired": false
+        "Name": "body",
+        "Type": "apitextil.Controllers.PagoVoucherController\u002BRechazoVoucherDto",
+        "IsRequired": true
       }
     ],
     "ReturnTypes": []

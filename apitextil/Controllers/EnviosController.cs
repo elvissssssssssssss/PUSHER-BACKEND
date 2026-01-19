@@ -18,6 +18,10 @@ namespace apitextil.Controllers
         private readonly EcommerceContext _context;
         private readonly IEnvioNotificacionService _notificacionService; // ⬅️ NUEVO
 
+        private async Task<bool> VentaExisteAsync(int ventaId)
+        {
+            return await _context.Ventas.AnyAsync(v => v.Id == ventaId);
+        }
 
         public EnviosController(IEnvioService envioService, EcommerceContext context,
              IEnvioNotificacionService notificacionService) // ⬅️ NUEVO)
@@ -47,6 +51,11 @@ namespace apitextil.Controllers
         {
             try
             {
+                if (ventaId <= 0) return BadRequest(new { message = "ventaId inválido" });
+
+                if (!await VentaExisteAsync(ventaId))
+                    return NotFound(new { message = $"No existe la venta #{ventaId}" });
+
                 var seguimiento = await _envioService.GetSeguimientoByVentaIdAsync(ventaId);
                 return Ok(seguimiento);
             }
@@ -56,18 +65,26 @@ namespace apitextil.Controllers
             }
         }
 
+
+
         [HttpPost("seguimiento")]
         public async Task<IActionResult> AddSeguimiento([FromBody] CreateSeguimientoEnvioDto seguimientoDto)
         {
             try
             {
-                // 1. Agregar el seguimiento
-                var result = await _envioService.AddSeguimientoAsync(seguimientoDto);
+                if (seguimientoDto == null)
+                    return BadRequest(new { message = "Body requerido" });
 
+                if (seguimientoDto.venta_id <= 0)
+                    return BadRequest(new { message = "venta_id inválido" });
+
+                if (!await VentaExisteAsync(seguimientoDto.venta_id))
+                    return NotFound(new { message = $"No existe la venta #{seguimientoDto.venta_id}" });
+
+                var result = await _envioService.AddSeguimientoAsync(seguimientoDto);
                 if (!result)
                     return BadRequest(new { message = "Error al agregar seguimiento" });
 
-                // 2. ENVIAR NOTIFICACIÓN PUSH ⬅️ NUEVO
                 await _notificacionService.NotificarActualizacionEnvio(
                     seguimientoDto.venta_id,
                     seguimientoDto.estado_id,
@@ -83,19 +100,27 @@ namespace apitextil.Controllers
             }
         }
 
+
+
         [HttpGet("documentos/{ventaId}")]
         public async Task<IActionResult> GetDocumentosByVentaId(int ventaId)
         {
             try
             {
+                if (ventaId <= 0) return BadRequest(new { message = "ventaId inválido" });
+
+                if (!await VentaExisteAsync(ventaId))
+                    return NotFound(new { message = $"No existe la venta #{ventaId}" });
+
                 var documentos = await _envioService.GetDocumentosByVentaIdAsync(ventaId);
-                return Ok(documentos);
+                return Ok(documentos); // ✅ si no hay registros => []
             }
             catch (Exception ex)
             {
                 return StatusCode(500, new { message = $"Error al obtener documentos: {ex.Message}" });
             }
         }
+
 
         [HttpPost("documentos")]
         public async Task<IActionResult> AddDocumento([FromBody] CreateDocumentoEnvioDto documentoDto)
