@@ -123,6 +123,22 @@ namespace apitextil.Controllers
                 return StatusCode(500, new ApiResponse(false, "Error interno al eliminar el producto", null, ex.Message));
             }
         }
+        // PATCH: api/Productos/5/activo
+        [HttpPatch("{id}/activo")]
+        public async Task<IActionResult> SetActivo(int id, [FromQuery] bool activo)
+        {
+            try
+            {
+                var ok = await _productoService.SetActivoAsync(id, activo);
+                return ok
+                    ? Ok(new ApiResponse(true, activo ? "Producto activado" : "Producto desactivado"))
+                    : NotFound(new ApiResponse(false, "Producto no encontrado"));
+            }
+            catch (Exception ex)
+            {
+                return StatusCode(500, new ApiResponse(false, "Error al cambiar estado", null, ex.Message));
+            }
+        }
 
 
         private void DeleteOldimage(string imagen)

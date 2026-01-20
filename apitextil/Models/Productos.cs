@@ -71,6 +71,8 @@ namespace apitextil.Models
         [Column("updated_at")]
         public DateTime UpdatedAt { get; set; } = DateTime.Now;
 
-       
+        [Column("activo")]
+        public bool Activo { get; set; } = true;
+
     }
 }

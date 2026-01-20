@@ -2009,6 +2009,36 @@
         }
       }
     },
+    "/api/Productos/{id}/activo": {
+      "patch": {
+        "tags": [
+          "Productos"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          },
+          {
+            "name": "activo",
+            "in": "query",
+            "schema": {
+              "type": "boolean"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
     "/api/Roles": {
       "get": {
         "tags": [
@@ -3541,6 +3571,9 @@
           "stock": {
             "type": "integer",
             "format": "int32"
+          },
+          "activo": {
+            "type": "boolean"
           },
           "talla": {
             "type": "string",

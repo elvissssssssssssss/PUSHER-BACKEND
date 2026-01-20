@@ -1059,6 +1059,27 @@
   },
   {
     "ContainingType": "apitextil.Controllers.ProductosController",
+    "Method": "SetActivo",
+    "RelativePath": "api/Productos/{id}/activo",
+    "HttpMethod": "PATCH",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      },
+      {
+        "Name": "activo",
+        "Type": "System.Boolean",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "apitextil.Controllers.ProductosController",
     "Method": "GetProductosByCategoria",
     "RelativePath": "api/Productos/categoria/{categoria}",
     "HttpMethod": "GET",

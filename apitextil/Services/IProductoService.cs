@@ -20,7 +20,9 @@
             Task<bool> DeleteProductoAsync(int id);
             Task<bool> ProductoExistsAsync(int id);
             Task<bool> CodeExistsAsync(string code, int? excludeId = null);
-           
+            Task<bool> SetActivoAsync(int id, bool activo);
+
+
         }
     }
 }

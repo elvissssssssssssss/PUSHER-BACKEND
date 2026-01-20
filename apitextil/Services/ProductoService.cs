@@ -19,6 +19,7 @@ namespace apitextil.Services
         public async Task<IEnumerable<ProductoDto>> GetAllProductosAsync()
         {
             var productos = await _context.Productos
+                .Where(p => p.Activo)
                 .OrderByDescending(p => p.CreatedAt)
                 .ToListAsync();
 
@@ -41,31 +42,34 @@ namespace apitextil.Services
         public async Task<IEnumerable<ProductoDto>> GetProductosByCategoriaAsync(string categoria)
         {
             var productos = await _context.Productos
-                .Where(p => p.Categoria == categoria)
+                .Where(p => p.Activo && p.Categoria == categoria)
                 .OrderByDescending(p => p.CreatedAt)
                 .ToListAsync();
 
             return productos.Select(MapToDto);
         }
+
 
         public async Task<IEnumerable<ProductoDto>> GetProductosByMarcaAsync(string marca)
         {
             var productos = await _context.Productos
-                .Where(p => p.Marca == marca)
+                .Where(p => p.Activo && p.Marca == marca)
                 .OrderByDescending(p => p.CreatedAt)
                 .ToListAsync();
 
             return productos.Select(MapToDto);
         }
 
+
         public async Task<IEnumerable<ProductoDto>> SearchProductosAsync(string searchTerm)
         {
             var productos = await _context.Productos
-                .Where(p => p.Nombre.Contains(searchTerm) ||
-                           p.Description!.Contains(searchTerm) ||
-                           p.Marca.Contains(searchTerm) ||
-                           p.Categoria!.Contains(searchTerm) ||
-                           p.Code.Contains(searchTerm))
+                .Where(p => p.Activo &&
+                       (p.Nombre.Contains(searchTerm) ||
+                        p.Description!.Contains(searchTerm) ||
+                        p.Marca.Contains(searchTerm) ||
+                        p.Categoria!.Contains(searchTerm) ||
+                        p.Code.Contains(searchTerm)))
                 .OrderByDescending(p => p.CreatedAt)
                 .ToListAsync();
 
@@ -100,6 +104,7 @@ namespace apitextil.Services
                 imagen2 = imagen2Path,
                 imagen3 = imagen3Path,
                 Categoria = createProductoDto.Categoria,
+                Activo = true,
                 CreatedAt = DateTime.Now,
                 UpdatedAt = DateTime.Now
             };
@@ -252,7 +257,18 @@ namespace apitextil.Services
             return true;
         }
 
+        public async Task<bool> SetActivoAsync(int id, bool activo)
+        {
+            var producto = await _context.Productos.FindAsync(id);
+            if (producto == null)
+                return false;
 
+            producto.Activo = activo;
+            producto.UpdatedAt = DateTime.Now;
+
+            await _context.SaveChangesAsync();
+            return true;
+        }
 
 
         public async Task<bool> ProductoExistsAsync(int id)

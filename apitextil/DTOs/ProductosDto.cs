@@ -12,6 +12,8 @@ namespace apitextil.DTOs
         public decimal Precio { get; set; }
         public decimal? PrecioDescuento { get; set; }
         public int Stock { get; set; }
+        public bool Activo { get; set; }
+
         public string Talla { get; set; } = string.Empty;
         public string Code { get; set; } = string.Empty;
         public string imagen { get; set; } = string.Empty;

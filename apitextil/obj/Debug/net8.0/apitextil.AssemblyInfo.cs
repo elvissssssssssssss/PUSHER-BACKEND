@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("apitextil")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+baf6b0b8a1b1a36d9886b89632d1d66c95fad227")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+486ac21f62f5bee0c4473d442793437e97332f88")]
 [assembly: System.Reflection.AssemblyProductAttribute("apitextil")]
 [assembly: System.Reflection.AssemblyTitleAttribute("apitextil")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
