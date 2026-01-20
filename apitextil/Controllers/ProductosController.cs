@@ -124,14 +124,20 @@ namespace apitextil.Controllers
             }
         }
         // PATCH: api/Productos/5/activo
+        public class SetActivoDto
+        {
+            public bool Activo { get; set; }
+        }
+
         [HttpPatch("{id}/activo")]
-        public async Task<IActionResult> SetActivo(int id, [FromQuery] bool activo)
+        public async Task<IActionResult> SetActivo(int id, [FromBody] SetActivoDto dto)
         {
             try
             {
-                var ok = await _productoService.SetActivoAsync(id, activo);
+                var ok = await _productoService.SetActivoAsync(id, dto.Activo);
+
                 return ok
-                    ? Ok(new ApiResponse(true, activo ? "Producto activado" : "Producto desactivado"))
+                    ? Ok(new ApiResponse(true, dto.Activo ? "Producto activado" : "Producto desactivado"))
                     : NotFound(new ApiResponse(false, "Producto no encontrado"));
             }
             catch (Exception ex)
@@ -139,6 +145,7 @@ namespace apitextil.Controllers
                 return StatusCode(500, new ApiResponse(false, "Error al cambiar estado", null, ex.Message));
             }
         }
+
 
 
         private void DeleteOldimage(string imagen)
